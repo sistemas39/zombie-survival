@@ -59,7 +59,7 @@ jobs:
       - name: Compilar APK
         run: |
           export PATH=$PATH:~/.local/bin
-          buildozer android debug
+          yes | buildozer android debug
 
       - name: Subir APK
         uses: actions/upload-artifact@v4
