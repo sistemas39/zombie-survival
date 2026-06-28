@@ -1,0 +1,6 @@
+.buildozer/
+bin/
+venv/
+__pycache__/
+*.log
+buildozer_*.log
