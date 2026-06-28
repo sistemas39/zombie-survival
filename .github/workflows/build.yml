@@ -46,11 +46,6 @@ jobs:
             automake \
             libtool
 
-      - name: Configurar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11.6'
-
       - name: Configurar Java
         uses: actions/setup-java@v4
         with:

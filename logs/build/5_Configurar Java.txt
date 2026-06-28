@@ -1,0 +1,37 @@
+﻿2026-06-28T22:15:53.3366869Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-06-28T22:15:53.3368363Z ##[group]Run actions/setup-java@v4
+2026-06-28T22:15:53.3368621Z with:
+2026-06-28T22:15:53.3368813Z   distribution: temurin
+2026-06-28T22:15:53.3369029Z   java-version: 17
+2026-06-28T22:15:53.3369229Z   java-package: jdk
+2026-06-28T22:15:53.3369435Z   check-latest: false
+2026-06-28T22:15:53.3369997Z   server-id: github
+2026-06-28T22:15:53.3370226Z   server-username: GITHUB_ACTOR
+2026-06-28T22:15:53.3370479Z   server-password: GITHUB_TOKEN
+2026-06-28T22:15:53.3370723Z   overwrite-settings: true
+2026-06-28T22:15:53.3370954Z   job-status: success
+2026-06-28T22:15:53.3373888Z   token: ***
+2026-06-28T22:15:53.3374084Z env:
+2026-06-28T22:15:53.3374334Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.6/x64
+2026-06-28T22:15:53.3374814Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib/pkgconfig
+2026-06-28T22:15:53.3375234Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.6/x64
+2026-06-28T22:15:53.3375606Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.6/x64
+2026-06-28T22:15:53.3375984Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.6/x64
+2026-06-28T22:15:53.3376359Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib
+2026-06-28T22:15:53.3376674Z ##[endgroup]
+2026-06-28T22:15:53.5082657Z ##[group]Installed distributions
+2026-06-28T22:15:53.5143525Z Resolved Java 17.0.19+10 from tool-cache
+2026-06-28T22:15:53.5144349Z Setting Java 17.0.19+10 as the default
+2026-06-28T22:15:53.5171063Z (node:4904) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-06-28T22:15:53.5172934Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-28T22:15:53.5175067Z Creating toolchains.xml for JDK version 17 from temurin
+2026-06-28T22:15:53.5239441Z Writing to /home/runner/.m2/toolchains.xml
+2026-06-28T22:15:53.5240139Z 
+2026-06-28T22:15:53.5240350Z Java configuration:
+2026-06-28T22:15:53.5240822Z   Distribution: temurin
+2026-06-28T22:15:53.5241286Z   Version: 17.0.19+10
+2026-06-28T22:15:53.5241968Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-06-28T22:15:53.5242393Z 
+2026-06-28T22:15:53.5242765Z ##[endgroup]
+2026-06-28T22:15:53.5253012Z Creating settings.xml with server-id: github
+2026-06-28T22:15:53.5260241Z Writing to /home/runner/.m2/settings.xml

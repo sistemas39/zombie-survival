@@ -1,0 +1,42 @@
+﻿2026-06-28T22:15:43.9258570Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-06-28T22:15:43.9260923Z ##[group]Run actions/setup-python@v5
+2026-06-28T22:15:43.9261217Z with:
+2026-06-28T22:15:43.9261431Z   python-version: 3.11.6
+2026-06-28T22:15:43.9261678Z   check-latest: false
+2026-06-28T22:15:43.9265015Z   token: ***
+2026-06-28T22:15:43.9265253Z   update-environment: true
+2026-06-28T22:15:43.9265507Z   allow-prereleases: false
+2026-06-28T22:15:43.9265742Z   freethreaded: false
+2026-06-28T22:15:43.9265964Z ##[endgroup]
+2026-06-28T22:15:44.0691475Z ##[group]Installed versions
+2026-06-28T22:15:44.0711697Z Version 3.11.6 was not found in the local cache
+2026-06-28T22:15:44.0824177Z (node:4848) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-06-28T22:15:44.0825321Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-06-28T22:15:45.1663982Z Version 3.11.6 is available for downloading
+2026-06-28T22:15:45.1666167Z Download from "https://github.com/actions/python-versions/releases/download/3.11.6-11113179737/python-3.11.6-linux-22.04-x64.tar.gz"
+2026-06-28T22:15:45.9261298Z Extract downloaded archive
+2026-06-28T22:15:45.9387206Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/617d6156-8048-40bc-9a19-cafd1af8653c -f /home/runner/work/_temp/423e061d-a23c-4cec-a0dd-8cfe10a9a006
+2026-06-28T22:15:47.8897845Z Execute installation script
+2026-06-28T22:15:47.8999890Z Check if Python hostedtoolcache folder exist...
+2026-06-28T22:15:47.9000725Z Create Python 3.11.6 folder
+2026-06-28T22:15:47.9014467Z Copy Python binaries to hostedtoolcache folder
+2026-06-28T22:15:48.5142889Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-06-28T22:15:48.5189956Z Upgrading pip...
+2026-06-28T22:15:50.8947265Z Looking in links: /tmp/tmpmthnhogq
+2026-06-28T22:15:50.8958116Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages (65.5.0)
+2026-06-28T22:15:50.8967737Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages (23.2.1)
+2026-06-28T22:15:52.1844228Z Collecting pip
+2026-06-28T22:15:52.1847188Z Obtaining dependency information for pip from https://files.pythonhosted.org/packages/5d/95/6b5cb3461ea5673ba0995989746db58eb18b91b54dbf331e72f569540946/pip-26.1.2-py3-none-any.whl.metadata
+2026-06-28T22:15:52.2242276Z Downloading pip-26.1.2-py3-none-any.whl.metadata (4.6 kB)
+2026-06-28T22:15:52.2311983Z Downloading pip-26.1.2-py3-none-any.whl (1.8 MB)
+2026-06-28T22:15:52.2721453Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 47.4 MB/s eta 0:00:00
+2026-06-28T22:15:52.2722218Z 
+2026-06-28T22:15:52.3206860Z Installing collected packages: pip
+2026-06-28T22:15:52.3207984Z Attempting uninstall: pip
+2026-06-28T22:15:52.3232919Z Found existing installation: pip 23.2.1
+2026-06-28T22:15:52.3630433Z Uninstalling pip-23.2.1:
+2026-06-28T22:15:52.3693707Z Successfully uninstalled pip-23.2.1
+2026-06-28T22:15:53.2513878Z Successfully installed pip-26.1.2
+2026-06-28T22:15:53.3110712Z Create complete file
+2026-06-28T22:15:53.3152274Z Successfully set up CPython (3.11.6)
+2026-06-28T22:15:53.3153457Z ##[endgroup]
