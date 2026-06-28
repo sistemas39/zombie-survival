@@ -56,6 +56,12 @@ jobs:
         run: |
           pip3 install --user --upgrade buildozer cython==0.29.37 virtualenv
 
+      - name: Parchear receta de Pygame
+        run: |
+          RECIPE=$(find ~/.local/lib -path "*/recipes/pygame" -type d | head -n 1)
+          sed -i "s/version = '[^']*'/version = '2.5.7'/g" $RECIPE/__init__.py
+          sed -i "s|https://github.com/pygame/pygame/archive/|https://github.com/pygame-community/pygame-ce/archive/refs/tags/|g" $RECIPE/__init__.py
+
       - name: Compilar APK
         run: |
           export PATH=$PATH:~/.local/bin
