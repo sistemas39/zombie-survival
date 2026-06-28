@@ -1,0 +1,32 @@
+﻿2026-06-28T22:12:38.0287002Z ##[group]Run pip3 install --user --upgrade buildozer cython==0.29.37 virtualenv
+2026-06-28T22:12:38.0287601Z [36;1mpip3 install --user --upgrade buildozer cython==0.29.37 virtualenv[0m
+2026-06-28T22:12:38.0360084Z shell: /usr/bin/bash -e {0}
+2026-06-28T22:12:38.0360341Z env:
+2026-06-28T22:12:38.0360649Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-06-28T22:12:38.0361152Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-06-28T22:12:38.0361537Z ##[endgroup]
+2026-06-28T22:12:40.5093357Z Collecting buildozer
+2026-06-28T22:12:40.5452148Z   Downloading buildozer-1.6.0-py3-none-any.whl (92 kB)
+2026-06-28T22:12:40.5598212Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.7/92.7 KB 6.9 MB/s eta 0:00:00
+2026-06-28T22:12:41.1359937Z Collecting cython==0.29.37
+2026-06-28T22:12:41.1429453Z   Downloading Cython-0.29.37-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+2026-06-28T22:12:41.1643908Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 98.1 MB/s eta 0:00:00
+2026-06-28T22:12:41.2869806Z Collecting virtualenv
+2026-06-28T22:12:41.2907807Z   Downloading virtualenv-21.5.1-py3-none-any.whl (4.6 MB)
+2026-06-28T22:12:41.3264292Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 135.7 MB/s eta 0:00:00
+2026-06-28T22:12:41.3468178Z Requirement already satisfied: pexpect in /usr/lib/python3/dist-packages (from buildozer) (4.8.0)
+2026-06-28T22:12:41.3471713Z Requirement already satisfied: packaging in /usr/lib/python3/dist-packages (from buildozer) (21.3)
+2026-06-28T22:12:41.3541188Z Requirement already satisfied: platformdirs<5,>=3.9.1 in /usr/local/lib/python3.10/dist-packages (from virtualenv) (4.10.0)
+2026-06-28T22:12:41.3968632Z Collecting filelock<4,>=3.24.2
+2026-06-28T22:12:41.4001017Z   Downloading filelock-3.29.4-py3-none-any.whl (42 kB)
+2026-06-28T22:12:41.4034695Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.8/42.8 KB 22.6 MB/s eta 0:00:00
+2026-06-28T22:12:41.4207721Z Collecting python-discovery>=1.4.2
+2026-06-28T22:12:41.4239864Z   Downloading python_discovery-1.4.2-py3-none-any.whl (33 kB)
+2026-06-28T22:12:41.4547230Z Collecting typing-extensions>=4.13.2
+2026-06-28T22:12:41.4579071Z   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-06-28T22:12:41.4622958Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 KB 14.7 MB/s eta 0:00:00
+2026-06-28T22:12:41.4815845Z Collecting distlib<1,>=0.3.7
+2026-06-28T22:12:41.4847434Z   Downloading distlib-0.4.3-py2.py3-none-any.whl (470 kB)
+2026-06-28T22:12:41.4909395Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 470.6/470.6 KB 113.3 MB/s eta 0:00:00
+2026-06-28T22:12:41.7409429Z Installing collected packages: distlib, typing-extensions, filelock, cython, python-discovery, buildozer, virtualenv
+2026-06-28T22:12:42.4047514Z Successfully installed buildozer-1.6.0 cython-0.29.37 distlib-0.4.3 filelock-3.29.4 python-discovery-1.4.2 typing-extensions-4.15.0 virtualenv-21.5.1

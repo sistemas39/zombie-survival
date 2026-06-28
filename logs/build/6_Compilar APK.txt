@@ -1,0 +1,1163 @@
+﻿2026-06-28T22:12:42.4809279Z ##[group]Run export PATH=$PATH:~/.local/bin
+2026-06-28T22:12:42.4809703Z [36;1mexport PATH=$PATH:~/.local/bin[0m
+2026-06-28T22:12:42.4810055Z [36;1msudo mkdir -p /usr/local/lib/android/sdk/tools/bin[0m
+2026-06-28T22:12:42.4810727Z [36;1msudo ln -s /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager /usr/local/lib/android/sdk/tools/bin/sdkmanager[0m
+2026-06-28T22:12:42.4811329Z [36;1mbuildozer android debug[0m
+2026-06-28T22:12:42.4878894Z shell: /usr/bin/bash -e {0}
+2026-06-28T22:12:42.4879150Z env:
+2026-06-28T22:12:42.4879459Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-06-28T22:12:42.4879963Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-06-28T22:12:42.4880355Z ##[endgroup]
+2026-06-28T22:12:42.6781534Z # Ensure build layout
+2026-06-28T22:12:42.6782134Z # Create directory /home/runner/.buildozer
+2026-06-28T22:12:42.6783152Z # Create directory /home/runner/.buildozer/cache
+2026-06-28T22:12:42.6784710Z # Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer
+2026-06-28T22:12:42.6785878Z # Create directory /home/runner/work/zombie-survival/zombie-survival/bin
+2026-06-28T22:12:42.6787156Z # Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/applibs
+2026-06-28T22:12:42.6788748Z # Create directory /home/runner/.buildozer/android/platform/android/platform
+2026-06-28T22:12:42.6790818Z # Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform
+2026-06-28T22:12:42.6792330Z # Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/app
+2026-06-28T22:12:42.6793339Z # Check configuration tokens
+2026-06-28T22:12:42.6794229Z # Preparing build
+2026-06-28T22:12:42.6794698Z # Check requirements for android
+2026-06-28T22:12:42.6797729Z # Search for Git (git)
+2026-06-28T22:12:42.6798720Z #  -> found at /usr/bin/git
+2026-06-28T22:12:42.6799332Z # Search for Cython (cython)
+2026-06-28T22:12:42.6800211Z #  -> found at /home/runner/.local/bin/cython
+2026-06-28T22:12:42.6800897Z # Search for Java compiler (javac)
+2026-06-28T22:12:42.6801675Z #  -> found at /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64/bin/javac
+2026-06-28T22:12:42.6802781Z # Search for Java keytool (keytool)
+2026-06-28T22:12:42.6803498Z #  -> found at /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64/bin/keytool
+2026-06-28T22:12:42.6804255Z # Install platform
+2026-06-28T22:12:42.6806647Z # Run 'git clone -b master --single-branch https://github.com/kivy/python-for-android.git python-for-android' ...
+2026-06-28T22:12:42.6807657Z # Cwd /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform
+2026-06-28T22:12:42.6824309Z Cloning into 'python-for-android'...
+2026-06-28T22:12:44.6836357Z # Run '/usr/bin/python3 -m pip install -q --user appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...
+2026-06-28T22:12:44.6837954Z # Cwd None
+2026-06-28T22:12:46.6851048Z # Android ANT is missing, downloading
+2026-06-28T22:12:46.6852128Z # Downloading https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz
+2026-06-28T22:12:48.1083027Z # Extracting apache-ant-1.9.4-bin.tar.gz to /home/runner/.buildozer/android/platform/apache-ant-1.9.4
+2026-06-28T22:12:48.4337690Z # Apache ANT installation done.
+2026-06-28T22:12:48.4339527Z # Android SDK found at /usr/local/lib/android/sdk
+2026-06-28T22:12:48.4340975Z # Recommended android's NDK version by p4a is: 28c
+2026-06-28T22:12:48.4343914Z # Android NDK is missing, downloading
+2026-06-28T22:12:48.4344765Z # Downloading https://dl.google.com/android/repository/android-ndk-r28c-linux.zip
+2026-06-28T22:12:53.6912314Z # Unpacking Android NDK
+2026-06-28T22:12:53.6913606Z # Extracting android-ndk-r28c-linux.zip to /home/runner/.buildozer/android/platform
+2026-06-28T22:12:53.6914747Z # Run 'unzip -q /home/runner/.buildozer/android/platform/android-ndk-r28c-linux.zip' ...
+2026-06-28T22:12:53.6915639Z # Cwd /home/runner/.buildozer/android/platform
+2026-06-28T22:13:10.7013831Z # Rename /home/runner/.buildozer/android/platform/android-ndk-r28c to /home/runner/.buildozer/android/platform/android-ndk-r28c
+2026-06-28T22:13:10.7015198Z # Android NDK installation done.
+2026-06-28T22:13:10.7015841Z # Installing/updating SDK platform tools if necessary
+2026-06-28T22:13:10.7028165Z # Run (expect) ['/usr/local/lib/android/sdk/tools/bin/sdkmanager', '--sdk_root=/usr/local/lib/android/sdk', 'platform-tools']
+2026-06-28T22:13:10.7029139Z # Cwd /usr/local/lib/android/sdk
+2026-06-28T22:13:17.2119369Z Loading package information...                                                  
+2026-06-28T22:13:17.3533808Z Loading local repository...                                                     
+2026-06-28T22:13:17.3540947Z [                                       ] 3% Loading local repository...        
+2026-06-28T22:13:19.9698376Z [                                       ] 3% Fetch remote repository...         
+2026-06-28T22:13:20.4756284Z [=                                      ] 3% Fetch remote repository...         
+2026-06-28T22:13:20.5934199Z [=                                      ] 4% Fetch remote repository...         
+2026-06-28T22:13:20.6569075Z [=                                      ] 5% Fetch remote repository...         
+2026-06-28T22:13:20.7136428Z [==                                     ] 5% Fetch remote repository...         
+2026-06-28T22:13:20.7930410Z [==                                     ] 6% Fetch remote repository...         
+2026-06-28T22:13:21.0393737Z [==                                     ] 7% Fetch remote repository...         
+2026-06-28T22:13:21.0394631Z [==                                     ] 7% Computing updates...               
+2026-06-28T22:13:21.0503471Z [===                                    ] 8% Computing updates...               
+2026-06-28T22:13:21.0643883Z [===                                    ] 10% Computing updates...              
+2026-06-28T22:13:21.0650221Z [=======================================] 100% Computing updates...             
+2026-06-28T22:13:21.0652768Z 
+2026-06-28T22:13:21.0652928Z 
+2026-06-28T22:13:21.1934148Z # Run (expect) ['/usr/local/lib/android/sdk/tools/bin/sdkmanager', '--sdk_root=/usr/local/lib/android/sdk', '--update']
+2026-06-28T22:13:21.1935026Z # Cwd /usr/local/lib/android/sdk
+2026-06-28T22:13:21.9214506Z Loading package information...                                                  
+2026-06-28T22:13:22.0112876Z Loading local repository...                                                     
+2026-06-28T22:13:22.0115531Z [                                       ] 3% Loading local repository...        
+2026-06-28T22:13:22.0209007Z [                                       ] 3% Fetch remote repository...         
+2026-06-28T22:13:22.3755949Z [=                                      ] 3% Fetch remote repository...         
+2026-06-28T22:13:22.4530841Z [=                                      ] 4% Fetch remote repository...         
+2026-06-28T22:13:22.4867551Z [=                                      ] 5% Fetch remote repository...         
+2026-06-28T22:13:22.5463557Z [==                                     ] 5% Fetch remote repository...         
+2026-06-28T22:13:22.6113311Z [==                                     ] 6% Fetch remote repository...         
+2026-06-28T22:13:22.7074214Z [==                                     ] 7% Fetch remote repository...         
+2026-06-28T22:13:22.7104159Z [==                                     ] 7% Computing updates...               
+2026-06-28T22:13:22.7206000Z [===                                    ] 8% Computing updates...               
+2026-06-28T22:13:22.7259664Z [===                                    ] 10% Computing updates...              
+2026-06-28T22:13:22.7260640Z 
+2026-06-28T22:13:22.7263614Z No updates available
+2026-06-28T22:13:22.7293408Z [=======================================] 100% Computing updates...             
+2026-06-28T22:13:22.7296162Z 
+2026-06-28T22:13:22.7296454Z 
+2026-06-28T22:13:22.8537630Z # Updating SDK build tools if necessary
+2026-06-28T22:13:22.8543302Z # Run '/usr/local/lib/android/sdk/tools/bin/sdkmanager --sdk_root=/usr/local/lib/android/sdk --list' ...
+2026-06-28T22:13:22.8544330Z # Cwd /usr/local/lib/android/sdk
+2026-06-28T22:13:23.5576448Z Loading package information...                                                  
+2026-06-28T22:13:23.6424243Z Loading local repository...                                                     
+2026-06-28T22:13:23.6425344Z [=========                              ] 25% Loading local repository...       
+2026-06-28T22:13:23.6526922Z [=========                              ] 25% Fetch remote repository...        
+2026-06-28T22:13:23.8805041Z [==========                             ] 26% Fetch remote repository...        
+2026-06-28T22:13:23.8805833Z [============                           ] 31% Fetch remote repository...        
+2026-06-28T22:13:23.9967887Z [============                           ] 32% Fetch remote repository...        
+2026-06-28T22:13:23.9978203Z [=============                          ] 33% Fetch remote repository...        
+2026-06-28T22:13:24.0475673Z [=============                          ] 35% Fetch remote repository...        
+2026-06-28T22:13:24.0477322Z [==============                         ] 36% Fetch remote repository...        
+2026-06-28T22:13:24.0661776Z [==============                         ] 37% Fetch remote repository...        
+2026-06-28T22:13:24.0665358Z [===============                        ] 38% Fetch remote repository...        
+2026-06-28T22:13:24.0853110Z [===============                        ] 39% Fetch remote repository...        
+2026-06-28T22:13:24.0855439Z [================                       ] 40% Fetch remote repository...        
+2026-06-28T22:13:24.1016719Z [================                       ] 41% Fetch remote repository...        
+2026-06-28T22:13:24.1021304Z [================                       ] 42% Fetch remote repository...        
+2026-06-28T22:13:24.1185808Z [=================                      ] 44% Fetch remote repository...        
+2026-06-28T22:13:24.1187286Z [=================                      ] 45% Fetch remote repository...        
+2026-06-28T22:13:24.1360763Z [==================                     ] 46% Fetch remote repository...        
+2026-06-28T22:13:24.1362375Z [==================                     ] 47% Fetch remote repository...        
+2026-06-28T22:13:24.1618788Z [===================                    ] 48% Fetch remote repository...        
+2026-06-28T22:13:24.1620939Z [===================                    ] 49% Fetch remote repository...        
+2026-06-28T22:13:24.1684191Z [====================                   ] 50% Fetch remote repository...        
+2026-06-28T22:13:24.1687204Z [====================                   ] 51% Fetch remote repository...        
+2026-06-28T22:13:24.1988839Z [====================                   ] 53% Fetch remote repository...        
+2026-06-28T22:13:24.1990461Z [=====================                  ] 54% Fetch remote repository...        
+2026-06-28T22:13:24.2157686Z [=====================                  ] 55% Fetch remote repository...        
+2026-06-28T22:13:24.2158463Z [======================                 ] 56% Fetch remote repository...        
+2026-06-28T22:13:24.2453488Z [======================                 ] 57% Fetch remote repository...        
+2026-06-28T22:13:24.2454249Z [=======================                ] 58% Fetch remote repository...        
+2026-06-28T22:13:24.2596519Z [=======================                ] 59% Fetch remote repository...        
+2026-06-28T22:13:24.2597589Z [========================               ] 60% Fetch remote repository...        
+2026-06-28T22:13:24.2763653Z [========================               ] 61% Fetch remote repository...        
+2026-06-28T22:13:24.2764688Z [=========================              ] 63% Fetch remote repository...        
+2026-06-28T22:13:24.2919694Z [=========================              ] 64% Fetch remote repository...        
+2026-06-28T22:13:24.2944278Z [=========================              ] 65% Fetch remote repository...        
+2026-06-28T22:13:24.3067896Z [==========================             ] 66% Fetch remote repository...        
+2026-06-28T22:13:24.3068947Z [==========================             ] 67% Fetch remote repository...        
+2026-06-28T22:13:24.3224490Z [===========================            ] 68% Fetch remote repository...        
+2026-06-28T22:13:24.3225452Z [===========================            ] 69% Fetch remote repository...        
+2026-06-28T22:13:24.3727333Z [============================           ] 70% Fetch remote repository...        
+2026-06-28T22:13:24.3783447Z [============================           ] 72% Fetch remote repository...        
+2026-06-28T22:13:24.3813026Z [=============================          ] 73% Fetch remote repository...        
+2026-06-28T22:13:24.3813793Z [=============================          ] 74% Fetch remote repository...        
+2026-06-28T22:13:24.3955398Z [=============================          ] 75% Fetch remote repository...        
+2026-06-28T22:13:24.4133286Z [=============================          ] 75% Computing updates...              
+2026-06-28T22:13:24.4183102Z [=======================================] 100% Computing updates...             
+2026-06-28T22:13:24.4233183Z Installed packages:
+2026-06-28T22:13:24.4663866Z   Path                               | Version       | Description                      | Location                          
+2026-06-28T22:13:24.4693453Z   -------                            | -------       | -------                          | -------                           
+2026-06-28T22:13:24.4694828Z   build-tools;34.0.0                 | 34.0.0        | Android SDK Build-Tools 34       | build-tools/34.0.0                
+2026-06-28T22:13:24.4696159Z   build-tools;35.0.0                 | 35.0.0        | Android SDK Build-Tools 35       | build-tools/35.0.0                
+2026-06-28T22:13:24.4753490Z   build-tools;35.0.1                 | 35.0.1        | Android SDK Build-Tools 35.0.1   | build-tools/35.0.1                
+2026-06-28T22:13:24.4754871Z   build-tools;36.0.0                 | 36.0.0        | Android SDK Build-Tools 36       | build-tools/36.0.0                
+2026-06-28T22:13:24.4783354Z   build-tools;36.1.0                 | 36.1.0        | Android SDK Build-Tools 36.1     | build-tools/36.1.0                
+2026-06-28T22:13:24.4784664Z   build-tools;37.0.0                 | 37.0.0        | Android SDK Build-Tools 37       | build-tools/37.0.0                
+2026-06-28T22:13:24.4813434Z   cmake;3.18.1                       | 3.18.1        | CMake 3.18.1                     | cmake/3.18.1                      
+2026-06-28T22:13:24.4843202Z   cmake;3.22.1                       | 3.22.1        | CMake 3.22.1                     | cmake/3.22.1                      
+2026-06-28T22:13:24.4873248Z   cmake;3.31.5                       | 3.31.5        | CMake 3.31.5                     | cmake/3.31.5                      
+2026-06-28T22:13:24.4874498Z   extras;android;m2repository        | 47.0.0        | Android Support Repository       | extras/android/m2repository       
+2026-06-28T22:13:24.4933410Z   extras;google;google_play_services | 49            | Google Play services             | extras/google/google_play_services
+2026-06-28T22:13:24.4963336Z   extras;google;m2repository         | 58            | Google Repository                | extras/google/m2repository        
+2026-06-28T22:13:24.4973606Z   ndk;27.3.13750724                  | 27.3.13750724 | NDK (Side by side) 27.3.13750724 | ndk/27.3.13750724                 
+2026-06-28T22:13:24.4974940Z   ndk;28.2.13676358                  | 28.2.13676358 | NDK (Side by side) 28.2.13676358 | ndk/28.2.13676358                 
+2026-06-28T22:13:24.4988006Z   ndk;29.0.14206865                  | 29.0.14206865 | NDK (Side by side) 29.0.14206865 | ndk/29.0.14206865                 
+2026-06-28T22:13:24.4989366Z   platform-tools                     | 37.0.0        | Android SDK Platform-Tools       | platform-tools                    
+2026-06-28T22:13:24.4991164Z   platforms;android-34               | 3             | Android SDK Platform 34          | platforms/android-34              
+2026-06-28T22:13:24.4992738Z   platforms;android-34-ext10         | 1             | Android SDK Platform 34-ext10    | platforms/android-34-ext10        
+2026-06-28T22:13:24.4994150Z   platforms;android-34-ext11         | 1             | Android SDK Platform 34-ext11    | platforms/android-34-ext11        
+2026-06-28T22:13:24.4995543Z   platforms;android-34-ext12         | 1             | Android SDK Platform 34-ext12    | platforms/android-34-ext12        
+2026-06-28T22:13:24.4998998Z   platforms;android-34-ext8          | 1             | Android SDK Platform 34-ext8     | platforms/android-34-ext8         
+2026-06-28T22:13:24.5000424Z   platforms;android-35               | 2             | Android SDK Platform 35          | platforms/android-35              
+2026-06-28T22:13:24.5001788Z   platforms;android-35-ext14         | 1             | Android SDK Platform 35-ext14    | platforms/android-35-ext14        
+2026-06-28T22:13:24.5003446Z   platforms;android-35-ext15         | 1             | Android SDK Platform 35-ext15    | platforms/android-35-ext15        
+2026-06-28T22:13:24.5004788Z   platforms;android-36               | 2             | Android SDK Platform 36          | platforms/android-36              
+2026-06-28T22:13:24.5006134Z   platforms;android-36-ext18         | 1             | Android SDK Platform 36-ext18    | platforms/android-36-ext18        
+2026-06-28T22:13:24.5007508Z   platforms;android-36-ext19         | 1             | Android SDK Platform 36-ext19    | platforms/android-36-ext19        
+2026-06-28T22:13:24.5008876Z   platforms;android-36.1             | 1             | Android SDK Platform 36.1        | platforms/android-36.1            
+2026-06-28T22:13:24.5013320Z   platforms;android-37.0             | 2             | Android SDK Platform 37.0        | platforms/android-37.0            
+2026-06-28T22:13:24.5015338Z 
+2026-06-28T22:13:24.5015695Z Available Packages:
+2026-06-28T22:13:24.5016678Z   Path                                                                            | Version           | Description                                                       
+2026-06-28T22:13:24.5017983Z   -------                                                                         | -------           | -------                                                           
+2026-06-28T22:13:24.5019361Z   add-ons;addon-google_apis-google-15                                             | 3                 | Google APIs                                                       
+2026-06-28T22:13:24.5023071Z   add-ons;addon-google_apis-google-16                                             | 4                 | Google APIs                                                       
+2026-06-28T22:13:24.5028216Z   add-ons;addon-google_apis-google-17                                             | 4                 | Google APIs                                                       
+2026-06-28T22:13:24.5029821Z   add-ons;addon-google_apis-google-18                                             | 4                 | Google APIs                                                       
+2026-06-28T22:13:24.5031346Z   add-ons;addon-google_apis-google-19                                             | 20                | Google APIs                                                       
+2026-06-28T22:13:24.5033093Z   add-ons;addon-google_apis-google-21                                             | 1                 | Google APIs                                                       
+2026-06-28T22:13:24.5034615Z   add-ons;addon-google_apis-google-22                                             | 1                 | Google APIs                                                       
+2026-06-28T22:13:24.5036119Z   add-ons;addon-google_apis-google-23                                             | 1                 | Google APIs                                                       
+2026-06-28T22:13:24.5037850Z   add-ons;addon-google_apis-google-24                                             | 1                 | Google APIs                                                       
+2026-06-28T22:13:24.5039332Z   build-tools;19.1.0                                                              | 19.1.0            | Android SDK Build-Tools 19.1                                      
+2026-06-28T22:13:24.5040752Z   build-tools;20.0.0                                                              | 20.0.0            | Android SDK Build-Tools 20                                        
+2026-06-28T22:13:24.5045787Z   build-tools;21.1.2                                                              | 21.1.2            | Android SDK Build-Tools 21.1.2                                    
+2026-06-28T22:13:24.5047284Z   build-tools;22.0.1                                                              | 22.0.1            | Android SDK Build-Tools 22.0.1                                    
+2026-06-28T22:13:24.5048716Z   build-tools;23.0.1                                                              | 23.0.1            | Android SDK Build-Tools 23.0.1                                    
+2026-06-28T22:13:24.5050158Z   build-tools;23.0.2                                                              | 23.0.2            | Android SDK Build-Tools 23.0.2                                    
+2026-06-28T22:13:24.5051564Z   build-tools;23.0.3                                                              | 23.0.3            | Android SDK Build-Tools 23.0.3                                    
+2026-06-28T22:13:24.5053370Z   build-tools;24.0.0                                                              | 24.0.0            | Android SDK Build-Tools 24                                        
+2026-06-28T22:13:24.5054796Z   build-tools;24.0.1                                                              | 24.0.1            | Android SDK Build-Tools 24.0.1                                    
+2026-06-28T22:13:24.5056164Z   build-tools;24.0.2                                                              | 24.0.2            | Android SDK Build-Tools 24.0.2                                    
+2026-06-28T22:13:24.5057495Z   build-tools;24.0.3                                                              | 24.0.3            | Android SDK Build-Tools 24.0.3                                    
+2026-06-28T22:13:24.5058820Z   build-tools;25.0.0                                                              | 25.0.0            | Android SDK Build-Tools 25                                        
+2026-06-28T22:13:24.5060133Z   build-tools;25.0.1                                                              | 25.0.1            | Android SDK Build-Tools 25.0.1                                    
+2026-06-28T22:13:24.5061806Z   build-tools;25.0.2                                                              | 25.0.2            | Android SDK Build-Tools 25.0.2                                    
+2026-06-28T22:13:24.5063340Z   build-tools;25.0.3                                                              | 25.0.3            | Android SDK Build-Tools 25.0.3                                    
+2026-06-28T22:13:24.5064691Z   build-tools;26.0.0                                                              | 26.0.0            | Android SDK Build-Tools 26                                        
+2026-06-28T22:13:24.5066008Z   build-tools;26.0.1                                                              | 26.0.1            | Android SDK Build-Tools 26.0.1                                    
+2026-06-28T22:13:24.5067333Z   build-tools;26.0.2                                                              | 26.0.2            | Android SDK Build-Tools 26.0.2                                    
+2026-06-28T22:13:24.5068662Z   build-tools;26.0.3                                                              | 26.0.3            | Android SDK Build-Tools 26.0.3                                    
+2026-06-28T22:13:24.5069987Z   build-tools;27.0.0                                                              | 27.0.0            | Android SDK Build-Tools 27                                        
+2026-06-28T22:13:24.5071548Z   build-tools;27.0.1                                                              | 27.0.1            | Android SDK Build-Tools 27.0.1                                    
+2026-06-28T22:13:24.5073066Z   build-tools;27.0.2                                                              | 27.0.2            | Android SDK Build-Tools 27.0.2                                    
+2026-06-28T22:13:24.5074422Z   build-tools;27.0.3                                                              | 27.0.3            | Android SDK Build-Tools 27.0.3                                    
+2026-06-28T22:13:24.5075796Z   build-tools;28.0.0                                                              | 28.0.0            | Android SDK Build-Tools 28                                        
+2026-06-28T22:13:24.5077121Z   build-tools;28.0.1                                                              | 28.0.1            | Android SDK Build-Tools 28.0.1                                    
+2026-06-28T22:13:24.5078464Z   build-tools;28.0.2                                                              | 28.0.2            | Android SDK Build-Tools 28.0.2                                    
+2026-06-28T22:13:24.5079803Z   build-tools;28.0.3                                                              | 28.0.3            | Android SDK Build-Tools 28.0.3                                    
+2026-06-28T22:13:24.5093675Z   build-tools;29.0.0                                                              | 29.0.0            | Android SDK Build-Tools 29                                        
+2026-06-28T22:13:24.5098889Z   build-tools;29.0.1                                                              | 29.0.1            | Android SDK Build-Tools 29.0.1                                    
+2026-06-28T22:13:24.5100492Z   build-tools;29.0.2                                                              | 29.0.2            | Android SDK Build-Tools 29.0.2                                    
+2026-06-28T22:13:24.5102033Z   build-tools;29.0.3                                                              | 29.0.3            | Android SDK Build-Tools 29.0.3                                    
+2026-06-28T22:13:24.5103854Z   build-tools;30.0.0                                                              | 30.0.0            | Android SDK Build-Tools 30                                        
+2026-06-28T22:13:24.5105380Z   build-tools;30.0.1                                                              | 30.0.1            | Android SDK Build-Tools 30.0.1                                    
+2026-06-28T22:13:24.5107190Z   build-tools;30.0.2                                                              | 30.0.2            | Android SDK Build-Tools 30.0.2                                    
+2026-06-28T22:13:24.5108706Z   build-tools;30.0.3                                                              | 30.0.3            | Android SDK Build-Tools 30.0.3                                    
+2026-06-28T22:13:24.5110254Z   build-tools;31.0.0                                                              | 31.0.0            | Android SDK Build-Tools 31                                        
+2026-06-28T22:13:24.5111756Z   build-tools;32.0.0                                                              | 32.0.0            | Android SDK Build-Tools 32                                        
+2026-06-28T22:13:24.5124030Z   build-tools;32.1.0-rc1                                                          | 32.1.0 rc1        | Android SDK Build-Tools 32.1-rc1                                  
+2026-06-28T22:13:24.5125680Z   build-tools;33.0.0                                                              | 33.0.0            | Android SDK Build-Tools 33                                        
+2026-06-28T22:13:24.5127258Z   build-tools;33.0.1                                                              | 33.0.1            | Android SDK Build-Tools 33.0.1                                    
+2026-06-28T22:13:24.5129103Z   build-tools;33.0.2                                                              | 33.0.2            | Android SDK Build-Tools 33.0.2                                    
+2026-06-28T22:13:24.5130659Z   build-tools;33.0.3                                                              | 33.0.3            | Android SDK Build-Tools 33.0.3                                    
+2026-06-28T22:13:24.5132178Z   build-tools;34.0.0                                                              | 34.0.0            | Android SDK Build-Tools 34                                        
+2026-06-28T22:13:24.5134126Z   build-tools;34.0.0-rc1                                                          | 34.0.0 rc1        | Android SDK Build-Tools 34-rc1                                    
+2026-06-28T22:13:24.5135739Z   build-tools;34.0.0-rc2                                                          | 34.0.0 rc2        | Android SDK Build-Tools 34-rc2                                    
+2026-06-28T22:13:24.5161552Z   build-tools;34.0.0-rc3                                                          | 34.0.0 rc3        | Android SDK Build-Tools 34-rc3                                    
+2026-06-28T22:13:24.5163393Z   build-tools;35.0.0                                                              | 35.0.0            | Android SDK Build-Tools 35                                        
+2026-06-28T22:13:24.5165017Z   build-tools;35.0.0-rc1                                                          | 35.0.0 rc1        | Android SDK Build-Tools 35-rc1                                    
+2026-06-28T22:13:24.5166726Z   build-tools;35.0.0-rc2                                                          | 35.0.0 rc2        | Android SDK Build-Tools 35-rc2                                    
+2026-06-28T22:13:24.5168340Z   build-tools;35.0.0-rc3                                                          | 35.0.0 rc3        | Android SDK Build-Tools 35-rc3                                    
+2026-06-28T22:13:24.5170020Z   build-tools;35.0.0-rc4                                                          | 35.0.0 rc4        | Android SDK Build-Tools 35-rc4                                    
+2026-06-28T22:13:24.5171603Z   build-tools;35.0.1                                                              | 35.0.1            | Android SDK Build-Tools 35.0.1                                    
+2026-06-28T22:13:24.5173698Z   build-tools;36.0.0                                                              | 36.0.0            | Android SDK Build-Tools 36                                        
+2026-06-28T22:13:24.5175271Z   build-tools;36.0.0-rc1                                                          | 36.0.0 rc1        | Android SDK Build-Tools 36-rc1                                    
+2026-06-28T22:13:24.5188416Z   build-tools;36.0.0-rc3                                                          | 36.0.0 rc3        | Android SDK Build-Tools 36-rc3                                    
+2026-06-28T22:13:24.5189592Z   build-tools;36.0.0-rc4                                                          | 36.0.0 rc4        | Android SDK Build-Tools 36-rc4                                    
+2026-06-28T22:13:24.5190642Z   build-tools;36.0.0-rc5                                                          | 36.0.0 rc5        | Android SDK Build-Tools 36-rc5                                    
+2026-06-28T22:13:24.5280027Z   build-tools;36.1.0                                                              | 36.1.0            | Android SDK Build-Tools 36.1                                      
+2026-06-28T22:13:24.5281738Z   build-tools;36.1.0-rc1                                                          | 36.1.0 rc1        | Android SDK Build-Tools 36.1-rc1                                  
+2026-06-28T22:13:24.5283886Z   build-tools;37.0.0                                                              | 37.0.0            | Android SDK Build-Tools 37                                        
+2026-06-28T22:13:24.5285562Z   build-tools;37.0.0-rc1                                                          | 37.0.0 rc1        | Android SDK Build-Tools 37-rc1                                    
+2026-06-28T22:13:24.5287645Z   build-tools;37.0.0-rc2                                                          | 37.0.0 rc2        | Android SDK Build-Tools 37-rc2                                    
+2026-06-28T22:13:24.5289290Z   build;lightbuild;0.0.10-alpha01                                                 | 0.0.10 rc1        | Lightbuild                                                        
+2026-06-28T22:13:24.5290903Z   build;templates                                                                 | 0.1.1             | Android Project Templates                                         
+2026-06-28T22:13:24.5292713Z   cmake;3.10.2.4988404                                                            | 3.10.2            | CMake 3.10.2.4988404                                              
+2026-06-28T22:13:24.5294199Z   cmake;3.18.1                                                                    | 3.18.1            | CMake 3.18.1                                                      
+2026-06-28T22:13:24.5295685Z   cmake;3.22.1                                                                    | 3.22.1            | CMake 3.22.1                                                      
+2026-06-28T22:13:24.5304141Z   cmake;3.30.3                                                                    | 3.30.3            | CMake 3.30.3                                                      
+2026-06-28T22:13:24.5305457Z   cmake;3.30.4                                                                    | 3.30.4            | CMake 3.30.4                                                      
+2026-06-28T22:13:24.5306920Z   cmake;3.30.5                                                                    | 3.30.5            | CMake 3.30.5                                                      
+2026-06-28T22:13:24.5308229Z   cmake;3.31.0                                                                    | 3.31.0            | CMake 3.31.0                                                      
+2026-06-28T22:13:24.5309541Z   cmake;3.31.1                                                                    | 3.31.1            | CMake 3.31.1                                                      
+2026-06-28T22:13:24.5310816Z   cmake;3.31.4                                                                    | 3.31.4            | CMake 3.31.4                                                      
+2026-06-28T22:13:24.5334697Z   cmake;3.31.5                                                                    | 3.31.5            | CMake 3.31.5                                                      
+2026-06-28T22:13:24.5336407Z   cmake;3.31.6                                                                    | 3.31.6            | CMake 3.31.6                                                      
+2026-06-28T22:13:24.5337939Z   cmake;3.6.4111459                                                               | 3.6.4111459       | CMake 3.6.4111459                                                 
+2026-06-28T22:13:24.5339526Z   cmake;4.0.2                                                                     | 4.0.2             | CMake 4.0.2                                                       
+2026-06-28T22:13:24.5354216Z   cmake;4.0.3                                                                     | 4.0.3             | CMake 4.0.3                                                       
+2026-06-28T22:13:24.5355609Z   cmake;4.1.0                                                                     | 4.1.0             | CMake 4.1.0                                                       
+2026-06-28T22:13:24.5356999Z   cmake;4.1.1                                                                     | 4.1.1             | CMake 4.1.1                                                       
+2026-06-28T22:13:24.5358419Z   cmake;4.1.2                                                                     | 4.1.2             | CMake 4.1.2                                                       
+2026-06-28T22:13:24.5360174Z   cmdline-tools;1.0                                                               | 1.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5361745Z   cmdline-tools;10.0                                                              | 10.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5375068Z   cmdline-tools;11.0                                                              | 11.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5376667Z   cmdline-tools;12.0                                                              | 12.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5378365Z   cmdline-tools;13.0                                                              | 13.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5379993Z   cmdline-tools;16.0                                                              | 16.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5381634Z   cmdline-tools;16.0-alpha01                                                      | 16.0.0 rc1        | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5383512Z   cmdline-tools;17.0                                                              | 17.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5385148Z   cmdline-tools;19.0                                                              | 19.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5386824Z   cmdline-tools;19.0-alpha01                                                      | 19.0.0 rc1        | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5388486Z   cmdline-tools;2.1                                                               | 2.1               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5414739Z   cmdline-tools;20.0                                                              | 20.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5416323Z   cmdline-tools;21.0                                                              | 21.0              | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5417948Z   cmdline-tools;3.0                                                               | 3.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5419846Z   cmdline-tools;4.0                                                               | 4.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5434364Z   cmdline-tools;5.0                                                               | 5.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5436184Z   cmdline-tools;6.0                                                               | 6.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5437807Z   cmdline-tools;7.0                                                               | 7.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5439436Z   cmdline-tools;8.0                                                               | 8.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5441016Z   cmdline-tools;9.0                                                               | 9.0               | Android SDK Command-line Tools                                    
+2026-06-28T22:13:24.5442892Z   cmdline-tools;latest                                                            | 21.0              | Android SDK Command-line Tools (latest)                           
+2026-06-28T22:13:24.5459514Z   emulator                                                                        | 36.6.11           | Android Emulator                                                  
+2026-06-28T22:13:24.5461139Z   extras;android;m2repository                                                     | 47.0.0            | Android Support Repository                                        
+2026-06-28T22:13:24.5463039Z   extras;google;auto                                                              | 2.0               | Android Auto Desktop Head Unit Emulator                           
+2026-06-28T22:13:24.5464751Z   extras;google;google_play_services                                              | 49                | Google Play services                                              
+2026-06-28T22:13:24.5466462Z   extras;google;instantapps                                                       | 1.9.0             | Google Play Instant Development SDK (Deprecated)                  
+2026-06-28T22:13:24.5468144Z   extras;google;m2repository                                                      | 58                | Google Repository                                                 
+2026-06-28T22:13:24.5469815Z   extras;google;market_apk_expansion                                              | 1                 | Google Play APK Expansion library                                 
+2026-06-28T22:13:24.5471623Z   extras;google;market_licensing                                                  | 1                 | Google Play Licensing Library                                     
+2026-06-28T22:13:24.5473512Z   extras;google;simulators                                                        | 1                 | Android Auto API Simulators                                       
+2026-06-28T22:13:24.5494852Z   extras;google;webdriver                                                         | 2                 | Google Web Driver                                                 
+2026-06-28T22:13:24.5496378Z   ndk-bundle                                                                      | 22.1.7171670      | NDK                                                               
+2026-06-28T22:13:24.5497911Z   ndk;16.1.4479499                                                                | 16.1.4479499      | NDK (Side by side) 16.1.4479499                                   
+2026-06-28T22:13:24.5499497Z   ndk;17.2.4988734                                                                | 17.2.4988734      | NDK (Side by side) 17.2.4988734                                   
+2026-06-28T22:13:24.5501337Z   ndk;18.1.5063045                                                                | 18.1.5063045      | NDK (Side by side) 18.1.5063045                                   
+2026-06-28T22:13:24.5503130Z   ndk;19.2.5345600                                                                | 19.2.5345600      | NDK (Side by side) 19.2.5345600                                   
+2026-06-28T22:13:24.5504685Z   ndk;20.0.5594570                                                                | 20.0.5594570      | NDK (Side by side) 20.0.5594570                                   
+2026-06-28T22:13:24.5506215Z   ndk;20.1.5948944                                                                | 20.1.5948944      | NDK (Side by side) 20.1.5948944                                   
+2026-06-28T22:13:24.5507712Z   ndk;21.0.6113669                                                                | 21.0.6113669      | NDK (Side by side) 21.0.6113669                                   
+2026-06-28T22:13:24.5509204Z   ndk;21.1.6352462                                                                | 21.1.6352462      | NDK (Side by side) 21.1.6352462                                   
+2026-06-28T22:13:24.5544907Z   ndk;21.2.6472646                                                                | 21.2.6472646      | NDK (Side by side) 21.2.6472646                                   
+2026-06-28T22:13:24.5546813Z   ndk;21.3.6528147                                                                | 21.3.6528147      | NDK (Side by side) 21.3.6528147                                   
+2026-06-28T22:13:24.5548386Z   ndk;21.4.7075529                                                                | 21.4.7075529      | NDK (Side by side) 21.4.7075529                                   
+2026-06-28T22:13:24.5549967Z   ndk;22.0.7026061                                                                | 22.0.7026061      | NDK (Side by side) 22.0.7026061                                   
+2026-06-28T22:13:24.5551509Z   ndk;22.1.7171670                                                                | 22.1.7171670      | NDK (Side by side) 22.1.7171670                                   
+2026-06-28T22:13:24.5553331Z   ndk;23.0.7599858                                                                | 23.0.7599858      | NDK (Side by side) 23.0.7599858                                   
+2026-06-28T22:13:24.5554902Z   ndk;23.1.7779620                                                                | 23.1.7779620      | NDK (Side by side) 23.1.7779620                                   
+2026-06-28T22:13:24.5556421Z   ndk;23.2.8568313                                                                | 23.2.8568313      | NDK (Side by side) 23.2.8568313                                   
+2026-06-28T22:13:24.5557961Z   ndk;24.0.8215888                                                                | 24.0.8215888      | NDK (Side by side) 24.0.8215888                                   
+2026-06-28T22:13:24.5559505Z   ndk;25.0.8775105                                                                | 25.0.8775105      | NDK (Side by side) 25.0.8775105                                   
+2026-06-28T22:13:24.5574256Z   ndk;25.1.8937393                                                                | 25.1.8937393      | NDK (Side by side) 25.1.8937393                                   
+2026-06-28T22:13:24.5575785Z   ndk;25.2.9519653                                                                | 25.2.9519653      | NDK (Side by side) 25.2.9519653                                   
+2026-06-28T22:13:24.5577343Z   ndk;26.0.10792818                                                               | 26.0.10792818     | NDK (Side by side) 26.0.10792818                                  
+2026-06-28T22:13:24.5578894Z   ndk;26.1.10909125                                                               | 26.1.10909125     | NDK (Side by side) 26.1.10909125                                  
+2026-06-28T22:13:24.5580408Z   ndk;26.2.11394342                                                               | 26.2.11394342     | NDK (Side by side) 26.2.11394342                                  
+2026-06-28T22:13:24.5582203Z   ndk;26.3.11579264                                                               | 26.3.11579264     | NDK (Side by side) 26.3.11579264                                  
+2026-06-28T22:13:24.5583995Z   ndk;27.0.11718014                                                               | 27.0.11718014 rc1 | NDK (Side by side) 27.0.11718014                                  
+2026-06-28T22:13:24.5585610Z   ndk;27.0.11902837                                                               | 27.0.11902837 rc2 | NDK (Side by side) 27.0.11902837                                  
+2026-06-28T22:13:24.5587138Z   ndk;27.0.12077973                                                               | 27.0.12077973     | NDK (Side by side) 27.0.12077973                                  
+2026-06-28T22:13:24.5604815Z   ndk;27.1.12297006                                                               | 27.1.12297006     | NDK (Side by side) 27.1.12297006                                  
+2026-06-28T22:13:24.5606429Z   ndk;27.2.12479018                                                               | 27.2.12479018     | NDK (Side by side) 27.2.12479018                                  
+2026-06-28T22:13:24.5608043Z   ndk;27.3.13750724                                                               | 27.3.13750724     | NDK (Side by side) 27.3.13750724                                  
+2026-06-28T22:13:24.5609942Z   ndk;28.0.12433566                                                               | 28.0.12433566 rc1 | NDK (Side by side) 28.0.12433566                                  
+2026-06-28T22:13:24.5611526Z   ndk;28.0.12674087                                                               | 28.0.12674087 rc2 | NDK (Side by side) 28.0.12674087                                  
+2026-06-28T22:13:24.5613380Z   ndk;28.0.12916984                                                               | 28.0.12916984 rc3 | NDK (Side by side) 28.0.12916984                                  
+2026-06-28T22:13:24.5614956Z   ndk;28.0.13004108                                                               | 28.0.13004108     | NDK (Side by side) 28.0.13004108                                  
+2026-06-28T22:13:24.5616511Z   ndk;28.1.13356709                                                               | 28.1.13356709     | NDK (Side by side) 28.1.13356709                                  
+2026-06-28T22:13:24.5634387Z   ndk;28.2.13676358                                                               | 28.2.13676358     | NDK (Side by side) 28.2.13676358                                  
+2026-06-28T22:13:24.5635918Z   ndk;29.0.13113456                                                               | 29.0.13113456 rc1 | NDK (Side by side) 29.0.13113456                                  
+2026-06-28T22:13:24.5637486Z   ndk;29.0.13599879                                                               | 29.0.13599879 rc2 | NDK (Side by side) 29.0.13599879                                  
+2026-06-28T22:13:24.5639058Z   ndk;29.0.13846066                                                               | 29.0.13846066 rc3 | NDK (Side by side) 29.0.13846066                                  
+2026-06-28T22:13:24.5640609Z   ndk;29.0.14033849                                                               | 29.0.14033849 rc4 | NDK (Side by side) 29.0.14033849                                  
+2026-06-28T22:13:24.5642214Z   ndk;29.0.14206865                                                               | 29.0.14206865     | NDK (Side by side) 29.0.14206865                                  
+2026-06-28T22:13:24.5643988Z   ndk;30.0.14904198                                                               | 30.0.14904198 rc1 | NDK (Side by side) 30.0.14904198                                  
+2026-06-28T22:13:24.5645551Z   platform-tools                                                                  | 37.0.0            | Android SDK Platform-Tools                                        
+2026-06-28T22:13:24.5647370Z   platforms;android-10                                                            | 2                 | Android SDK Platform 10                                           
+2026-06-28T22:13:24.5648910Z   platforms;android-11                                                            | 2                 | Android SDK Platform 11                                           
+2026-06-28T22:13:24.5650496Z   platforms;android-12                                                            | 3                 | Android SDK Platform 12                                           
+2026-06-28T22:13:24.5652037Z   platforms;android-13                                                            | 1                 | Android SDK Platform 13                                           
+2026-06-28T22:13:24.5664865Z   platforms;android-14                                                            | 4                 | Android SDK Platform 14                                           
+2026-06-28T22:13:24.5666502Z   platforms;android-15                                                            | 5                 | Android SDK Platform 15                                           
+2026-06-28T22:13:24.5668114Z   platforms;android-16                                                            | 5                 | Android SDK Platform 16                                           
+2026-06-28T22:13:24.5673742Z   platforms;android-17                                                            | 3                 | Android SDK Platform 17                                           
+2026-06-28T22:13:24.5675362Z   platforms;android-18                                                            | 3                 | Android SDK Platform 18                                           
+2026-06-28T22:13:24.5676959Z   platforms;android-19                                                            | 4                 | Android SDK Platform 19                                           
+2026-06-28T22:13:24.5704802Z   platforms;android-20                                                            | 2                 | Android SDK Platform 20                                           
+2026-06-28T22:13:24.5706415Z   platforms;android-21                                                            | 2                 | Android SDK Platform 21                                           
+2026-06-28T22:13:24.5708046Z   platforms;android-22                                                            | 2                 | Android SDK Platform 22                                           
+2026-06-28T22:13:24.5709668Z   platforms;android-23                                                            | 3                 | Android SDK Platform 23                                           
+2026-06-28T22:13:24.5711246Z   platforms;android-24                                                            | 2                 | Android SDK Platform 24                                           
+2026-06-28T22:13:24.5713062Z   platforms;android-25                                                            | 3                 | Android SDK Platform 25                                           
+2026-06-28T22:13:24.5714682Z   platforms;android-26                                                            | 2                 | Android SDK Platform 26                                           
+2026-06-28T22:13:24.5716263Z   platforms;android-27                                                            | 3                 | Android SDK Platform 27                                           
+2026-06-28T22:13:24.5717807Z   platforms;android-28                                                            | 6                 | Android SDK Platform 28                                           
+2026-06-28T22:13:24.5719387Z   platforms;android-29                                                            | 5                 | Android SDK Platform 29                                           
+2026-06-28T22:13:24.5720948Z   platforms;android-30                                                            | 3                 | Android SDK Platform 30                                           
+2026-06-28T22:13:24.5723008Z   platforms;android-31                                                            | 1                 | Android SDK Platform 31                                           
+2026-06-28T22:13:24.5724692Z   platforms;android-32                                                            | 1                 | Android SDK Platform 32                                           
+2026-06-28T22:13:24.5734327Z   platforms;android-33                                                            | 3                 | Android SDK Platform 33                                           
+2026-06-28T22:13:24.5735947Z   platforms;android-33-ext4                                                       | 1                 | Android SDK Platform 33-ext4                                      
+2026-06-28T22:13:24.5737597Z   platforms;android-33-ext5                                                       | 1                 | Android SDK Platform 33-ext5                                      
+2026-06-28T22:13:24.5739219Z   platforms;android-34                                                            | 3                 | Android SDK Platform 34                                           
+2026-06-28T22:13:24.5740806Z   platforms;android-34-ext10                                                      | 1                 | Android SDK Platform 34-ext10                                     
+2026-06-28T22:13:24.5742951Z   platforms;android-34-ext11                                                      | 1                 | Android SDK Platform 34-ext11                                     
+2026-06-28T22:13:24.5744613Z   platforms;android-34-ext12                                                      | 1                 | Android SDK Platform 34-ext12                                     
+2026-06-28T22:13:24.5746228Z   platforms;android-34-ext8                                                       | 1                 | Android SDK Platform 34-ext8                                      
+2026-06-28T22:13:24.5747815Z   platforms;android-35                                                            | 2                 | Android SDK Platform 35                                           
+2026-06-28T22:13:24.5749383Z   platforms;android-35-ext14                                                      | 1                 | Android SDK Platform 35-ext14                                     
+2026-06-28T22:13:24.5764697Z   platforms;android-35-ext15                                                      | 1                 | Android SDK Platform 35-ext15                                     
+2026-06-28T22:13:24.5793996Z   platforms;android-36                                                            | 2                 | Android SDK Platform 36                                           
+2026-06-28T22:13:24.5795674Z   platforms;android-36-ext18                                                      | 1                 | Android SDK Platform 36-ext18                                     
+2026-06-28T22:13:24.5797454Z   platforms;android-36-ext19                                                      | 1                 | Android SDK Platform 36-ext19                                     
+2026-06-28T22:13:24.5799156Z   platforms;android-36.1                                                          | 1                 | Android SDK Platform 36.1                                         
+2026-06-28T22:13:24.5800815Z   platforms;android-37.0                                                          | 2                 | Android SDK Platform 37.0                                         
+2026-06-28T22:13:24.5802652Z   platforms;android-7                                                             | 3                 | Android SDK Platform 7                                            
+2026-06-28T22:13:24.5804295Z   platforms;android-8                                                             | 3                 | Android SDK Platform 8                                            
+2026-06-28T22:13:24.5814570Z   platforms;android-9                                                             | 2                 | Android SDK Platform 9                                            
+2026-06-28T22:13:24.5816196Z   platforms;android-CANARY                                                        | 13                | Android SDK Platform CANARY                                       
+2026-06-28T22:13:24.5817929Z   platforms;android-CinnamonBun                                                   | 5                 | Android SDK Platform CinnamonBun                                  
+2026-06-28T22:13:24.5819716Z   platforms;android-CinnamonBun-ext23                                             | 3                 | Android SDK Platform CinnamonBun-ext23                            
+2026-06-28T22:13:24.5821389Z   skiaparser;1                                                                    | 6                 | Layout Inspector image server for API 29-30                       
+2026-06-28T22:13:24.5823269Z   skiaparser;2                                                                    | 3                 | Layout Inspector image server for API S                           
+2026-06-28T22:13:24.5824809Z   skiaparser;3                                                                    | 8                 | Layout Inspector image server for API 31-36                       
+2026-06-28T22:13:24.5826646Z   sources;android-15                                                              | 2                 | Sources for Android 15                                            
+2026-06-28T22:13:24.5828199Z   sources;android-16                                                              | 2                 | Sources for Android 16                                            
+2026-06-28T22:13:24.5835063Z   sources;android-17                                                              | 1                 | Sources for Android 17                                            
+2026-06-28T22:13:24.5853717Z   sources;android-18                                                              | 1                 | Sources for Android 18                                            
+2026-06-28T22:13:24.5895922Z   sources;android-19                                                              | 2                 | Sources for Android 19                                            
+2026-06-28T22:13:24.5943438Z   sources;android-20                                                              | 1                 | Sources for Android 20                                            
+2026-06-28T22:13:24.5959539Z   sources;android-21                                                              | 1                 | Sources for Android 21                                            
+2026-06-28T22:13:24.5972630Z   sources;android-22                                                              | 1                 | Sources for Android 22                                            
+2026-06-28T22:13:24.6003316Z   sources;android-23                                                              | 1                 | Sources for Android 23                                            
+2026-06-28T22:13:24.6013541Z   sources;android-24                                                              | 1                 | Sources for Android 24                                            
+2026-06-28T22:13:24.6043585Z   sources;android-25                                                              | 1                 | Sources for Android 25                                            
+2026-06-28T22:13:24.6063356Z   sources;android-26                                                              | 1                 | Sources for Android 26                                            
+2026-06-28T22:13:24.6093341Z   sources;android-27                                                              | 1                 | Sources for Android 27                                            
+2026-06-28T22:13:24.6103552Z   sources;android-28                                                              | 1                 | Sources for Android 28                                            
+2026-06-28T22:13:24.6133516Z   sources;android-29                                                              | 1                 | Sources for Android 29                                            
+2026-06-28T22:13:24.6153331Z   sources;android-30                                                              | 1                 | Sources for Android 30                                            
+2026-06-28T22:13:24.6183318Z   sources;android-31                                                              | 1                 | Sources for Android 31                                            
+2026-06-28T22:13:24.6193592Z   sources;android-32                                                              | 1                 | Sources for Android 32                                            
+2026-06-28T22:13:24.6213312Z   sources;android-33                                                              | 1                 | Sources for Android 33                                            
+2026-06-28T22:13:24.6230419Z   sources;android-34                                                              | 2                 | Sources for Android 34                                            
+2026-06-28T22:13:24.6253472Z   sources;android-35                                                              | 1                 | Sources for Android 35                                            
+2026-06-28T22:13:24.6283533Z   sources;android-36                                                              | 1                 | Sources for Android 36                                            
+2026-06-28T22:13:24.6291597Z   sources;android-36.1                                                            | 1                 | Sources for Android 36.1                                          
+2026-06-28T22:13:24.6323564Z   sources;android-37.0                                                            | 2                 | Sources for Android 37.0                                          
+2026-06-28T22:13:24.6353566Z   system-images;android-10;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6373432Z   system-images;android-10;default;x86                                            | 5                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6403511Z   system-images;android-10;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6413664Z   system-images;android-10;google_apis;x86                                        | 6                 | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6433643Z   system-images;android-14;default;armeabi-v7a                                    | 2                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6463449Z   system-images;android-15;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6473641Z   system-images;android-15;default;x86                                            | 7                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6503651Z   system-images;android-15;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6511693Z   system-images;android-15;google_apis;x86                                        | 7                 | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6523498Z   system-images;android-16;default;armeabi-v7a                                    | 6                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6525274Z   system-images;android-16;default;mips                                           | 1                 | MIPS System Image                                                 
+2026-06-28T22:13:24.6526779Z   system-images;android-16;default;x86                                            | 7                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6528261Z   system-images;android-16;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6529342Z   system-images;android-16;google_apis;x86                                        | 7                 | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6530299Z   system-images;android-17;default;armeabi-v7a                                    | 6                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6531224Z   system-images;android-17;default;mips                                           | 1                 | MIPS System Image                                                 
+2026-06-28T22:13:24.6532120Z   system-images;android-17;default;x86                                            | 7                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6533955Z   system-images;android-17;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6535000Z   system-images;android-17;google_apis;x86                                        | 7                 | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6535946Z   system-images;android-18;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6536864Z   system-images;android-18;default;x86                                            | 4                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6537804Z   system-images;android-18;google_apis;armeabi-v7a                                | 6                 | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6538760Z   system-images;android-18;google_apis;x86                                        | 6                 | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6539701Z   system-images;android-19;default;armeabi-v7a                                    | 5                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6540621Z   system-images;android-19;default;x86                                            | 6                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6541557Z   system-images;android-19;google_apis;armeabi-v7a                                | 40                | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6542858Z   system-images;android-19;google_apis;x86                                        | 40                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6545050Z   system-images;android-21;android-tv;armeabi-v7a                                 | 3                 | Android TV ARM EABI v7a System Image                              
+2026-06-28T22:13:24.6546080Z   system-images;android-21;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6547014Z   system-images;android-21;default;arm64-v8a                                      | 4                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6547939Z   system-images;android-21;default;armeabi-v7a                                    | 4                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6549073Z   system-images;android-21;default;x86                                            | 5                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6549989Z   system-images;android-21;default;x86_64                                         | 5                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6550941Z   system-images;android-21;google_apis;arm64-v8a                                  | 32                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6551901Z   system-images;android-21;google_apis;armeabi-v7a                                | 32                | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6553217Z   system-images;android-21;google_apis;x86                                        | 32                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6554172Z   system-images;android-21;google_apis;x86_64                                     | 32                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6555130Z   system-images;android-22;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6556235Z   system-images;android-22;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6557163Z   system-images;android-22;default;armeabi-v7a                                    | 2                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6558079Z   system-images;android-22;default;x86                                            | 6                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6559041Z   system-images;android-22;default;x86_64                                         | 6                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6559989Z   system-images;android-22;google_apis;arm64-v8a                                  | 26                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6560955Z   system-images;android-22;google_apis;armeabi-v7a                                | 26                | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6561904Z   system-images;android-22;google_apis;x86                                        | 26                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6563588Z   system-images;android-22;google_apis;x86_64                                     | 26                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6564464Z   system-images;android-23;android-tv;armeabi-v7a                                 | 12                | Android TV ARM EABI v7a System Image                              
+2026-06-28T22:13:24.6565296Z   system-images;android-23;android-tv;x86                                         | 21                | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6566103Z   system-images;android-23;default;arm64-v8a                                      | 7                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6566903Z   system-images;android-23;default;armeabi-v7a                                    | 6                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6567705Z   system-images;android-23;default;x86                                            | 10                | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6568663Z   system-images;android-23;default;x86_64                                         | 10                | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6569472Z   system-images;android-23;google_apis;arm64-v8a                                  | 33                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6570319Z   system-images;android-23;google_apis;armeabi-v7a                                | 33                | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6571147Z   system-images;android-23;google_apis;x86                                        | 33                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6571957Z   system-images;android-23;google_apis;x86_64                                     | 33                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6573079Z   system-images;android-24;android-tv;x86                                         | 22                | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6573884Z   system-images;android-24;default;arm64-v8a                                      | 9                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6574846Z   system-images;android-24;default;armeabi-v7a                                    | 7                 | ARM EABI v7a System Image                                         
+2026-06-28T22:13:24.6575638Z   system-images;android-24;default;x86                                            | 8                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6576883Z   system-images;android-24;default;x86_64                                         | 8                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6578432Z   system-images;android-24;google_apis;arm64-v8a                                  | 29                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6593622Z   system-images;android-24;google_apis;x86                                        | 27                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6594556Z   system-images;android-24;google_apis;x86_64                                     | 27                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6595419Z   system-images;android-24;google_apis_playstore;x86                              | 19                | Google Play Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6596665Z   system-images;android-25;android-tv;x86                                         | 16                | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6597880Z   system-images;android-25;android-wear;armeabi-v7a                               | 3                 | Android Wear ARM EABI v7a System Image                            
+2026-06-28T22:13:24.6599112Z   system-images;android-25;android-wear;x86                                       | 3                 | Android Wear Intel x86 Atom System Image                          
+2026-06-28T22:13:24.6600303Z   system-images;android-25;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6601444Z   system-images;android-25;default;x86                                            | 1                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6602806Z   system-images;android-25;default;x86_64                                         | 1                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6604417Z   system-images;android-25;google_apis;arm64-v8a                                  | 20                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6608121Z   system-images;android-25;google_apis;armeabi-v7a                                | 18                | Google APIs ARM EABI v7a System Image                             
+2026-06-28T22:13:24.6609055Z   system-images;android-25;google_apis;x86                                        | 18                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6609905Z   system-images;android-25;google_apis;x86_64                                     | 18                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6610779Z   system-images;android-25;google_apis_playstore;x86                              | 9                 | Google Play Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6611624Z   system-images;android-26;android-tv;x86                                         | 14                | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6612756Z   system-images;android-26;android-wear;x86                                       | 4                 | Android Wear Intel x86 Atom System Image                          
+2026-06-28T22:13:24.6614292Z   system-images;android-26;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6616084Z   system-images;android-26;default;x86                                            | 1                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6617605Z   system-images;android-26;default;x86_64                                         | 1                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6619173Z   system-images;android-26;google_apis;arm64-v8a                                  | 3                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6620788Z   system-images;android-26;google_apis;x86                                        | 16                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6622356Z   system-images;android-26;google_apis;x86_64                                     | 16                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6624254Z   system-images;android-26;google_apis_playstore;x86                              | 7                 | Google Play Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6625271Z   system-images;android-27;android-tv;x86                                         | 9                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6626084Z   system-images;android-27;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6626931Z   system-images;android-27;default;x86                                            | 1                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6627712Z   system-images;android-27;default;x86_64                                         | 1                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6628529Z   system-images;android-27;google_apis;arm64-v8a                                  | 3                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6629349Z   system-images;android-27;google_apis;x86                                        | 11                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6630180Z   system-images;android-27;google_apis_playstore;x86                              | 3                 | Google Play Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6631221Z   system-images;android-28;android-tv;x86                                         | 10                | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6632026Z   system-images;android-28;android-wear;x86                                       | 9                 | Wear OS Intel x86 Atom System Image                               
+2026-06-28T22:13:24.6633478Z   system-images;android-28;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6634355Z   system-images;android-28;default;x86                                            | 4                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6635148Z   system-images;android-28;default;x86_64                                         | 4                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6635983Z   system-images;android-28;google_apis;arm64-v8a                                  | 2                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6636806Z   system-images;android-28;google_apis;x86                                        | 12                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6637779Z   system-images;android-28;google_apis;x86_64                                     | 11                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6638643Z   system-images;android-28;google_apis_playstore;arm64-v8a                        | 2                 | Google ARM64-V8a Play ARM 64 v8a System Image                     
+2026-06-28T22:13:24.6639529Z   system-images;android-28;google_apis_playstore;x86                              | 9                 | Google Play Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6640406Z   system-images;android-28;google_apis_playstore;x86_64                           | 8                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6641245Z   system-images;android-29;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6642050Z   system-images;android-29;default;arm64-v8a                                      | 8                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6643102Z   system-images;android-29;default;x86                                            | 8                 | Intel x86 Atom System Image                                       
+2026-06-28T22:13:24.6643896Z   system-images;android-29;default;x86_64                                         | 8                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6644709Z   system-images;android-29;google_apis;arm64-v8a                                  | 13                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6645683Z   system-images;android-29;google_apis;x86                                        | 13                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6646504Z   system-images;android-29;google_apis;x86_64                                     | 13                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6647360Z   system-images;android-29;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6648262Z   system-images;android-29;google_apis_playstore;x86                              | 9                 | Google Play Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6649127Z   system-images;android-29;google_apis_playstore;x86_64                           | 9                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6650137Z   system-images;android-30;android-tv;x86                                         | 4                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6650991Z   system-images;android-30;android-wear-cn;arm64-v8a                              | 12                | China version of Wear OS 3 ARM 64 v8a System Image                
+2026-06-28T22:13:24.6651848Z   system-images;android-30;android-wear-cn;x86                                    | 12                | China version of Wear OS 3 Intel x86 Atom System Image            
+2026-06-28T22:13:24.6653000Z   system-images;android-30;android-wear;arm64-v8a                                 | 12                | Wear OS 3 ARM 64 v8a System Image                                 
+2026-06-28T22:13:24.6653862Z   system-images;android-30;android-wear;x86                                       | 12                | Wear OS 3 Intel x86 Atom System Image                             
+2026-06-28T22:13:24.6654684Z   system-images;android-30;aosp_atd;arm64-v8a                                     | 2                 | AOSP ATD ARM 64 v8a System Image                                  
+2026-06-28T22:13:24.6655488Z   system-images;android-30;aosp_atd;x86                                           | 1                 | AOSP ATD Intel x86 Atom System Image                              
+2026-06-28T22:13:24.6656439Z   system-images;android-30;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                           
+2026-06-28T22:13:24.6657240Z   system-images;android-30;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6658663Z   system-images;android-30;default;x86_64                                         | 11                | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6659816Z   system-images;android-30;google-tv;x86                                          | 4                 | Google TV Intel x86 Atom System Image                             
+2026-06-28T22:13:24.6660638Z   system-images;android-30;google_apis;arm64-v8a                                  | 16                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6661468Z   system-images;android-30;google_apis;x86                                        | 16                | Google APIs Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6662288Z   system-images;android-30;google_apis;x86_64                                     | 16                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6694413Z   system-images;android-30;google_apis_playstore;arm64-v8a                        | 10                | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6696063Z   system-images;android-30;google_apis_playstore;x86                              | 9                 | Google Play Intel x86 Atom System Image                           
+2026-06-28T22:13:24.6697660Z   system-images;android-30;google_apis_playstore;x86_64                           | 10                | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6699201Z   system-images;android-30;google_atd;arm64-v8a                                   | 2                 | Google APIs ATD ARM 64 v8a System Image                           
+2026-06-28T22:13:24.6700661Z   system-images;android-30;google_atd;x86                                         | 1                 | Google APIs ATD Intel x86 Atom System Image                       
+2026-06-28T22:13:24.6702073Z   system-images;android-30;google_atd;x86_64                                      | 2                 | Google APIs ATD Intel x86_64 Atom System Image                    
+2026-06-28T22:13:24.6703911Z   system-images;android-31;android-tv;arm64-v8a                                   | 4                 | Android TV ARM 64 v8a System Image                                
+2026-06-28T22:13:24.6705331Z   system-images;android-31;android-tv;x86                                         | 4                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6706691Z   system-images;android-31;aosp_atd;arm64-v8a                                     | 1                 | AOSP ATD ARM 64 v8a System Image                                  
+2026-06-28T22:13:24.6708086Z   system-images;android-31;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                           
+2026-06-28T22:13:24.6709443Z   system-images;android-31;default;arm64-v8a                                      | 4                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6710831Z   system-images;android-31;default;x86_64                                         | 5                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6712208Z   system-images;android-31;google-tv;arm64-v8a                                    | 4                 | Google TV ARM 64 v8a System Image                                 
+2026-06-28T22:13:24.6714079Z   system-images;android-31;google-tv;x86                                          | 4                 | Google TV Intel x86 Atom System Image                             
+2026-06-28T22:13:24.6715552Z   system-images;android-31;google_apis;arm64-v8a                                  | 11                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6717059Z   system-images;android-31;google_apis;x86_64                                     | 14                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6718606Z   system-images;android-31;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6720183Z   system-images;android-31;google_apis_playstore;x86_64                           | 9                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6721723Z   system-images;android-31;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 v8a System Image                           
+2026-06-28T22:13:24.6723842Z   system-images;android-31;google_atd;x86_64                                      | 2                 | Google APIs ATD Intel x86_64 Atom System Image                    
+2026-06-28T22:13:24.6725345Z   system-images;android-32;android-desktop;arm64-v8a                              | 5                 | Desktop ARM 64 v8a System Image                                   
+2026-06-28T22:13:24.6726859Z   system-images;android-32;android-desktop;x86_64                                 | 5                 | Desktop Intel x86_64 Atom System Image                            
+2026-06-28T22:13:24.6728335Z   system-images;android-32;aosp_atd;arm64-v8a                                     | 1                 | AOSP ATD ARM 64 v8a System Image                                  
+2026-06-28T22:13:24.6729751Z   system-images;android-32;aosp_atd;x86_64                                        | 1                 | AOSP ATD Intel x86_64 Atom System Image                           
+2026-06-28T22:13:24.6731175Z   system-images;android-32;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6732768Z   system-images;android-32;default;x86_64                                         | 2                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6734234Z   system-images;android-32;google_apis;arm64-v8a                                  | 8                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6735957Z   system-images;android-32;google_apis;x86_64                                     | 8                 | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6737485Z   system-images;android-32;google_apis_playstore;arm64-v8a                        | 4                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6739050Z   system-images;android-32;google_apis_playstore;x86_64                           | 4                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6740537Z   system-images;android-32;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 v8a System Image                           
+2026-06-28T22:13:24.6742009Z   system-images;android-32;google_atd;x86_64                                      | 1                 | Google APIs ATD Intel x86_64 Atom System Image                    
+2026-06-28T22:13:24.6743770Z   system-images;android-33-ext4;google_apis_playstore;arm64-v8a                   | 1                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6745418Z   system-images;android-33-ext4;google_apis_playstore;x86_64                      | 1                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6747180Z   system-images;android-33-ext5;google_apis_playstore;arm64-v8a                   | 2                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6748753Z   system-images;android-33-ext5;google_apis_playstore;x86_64                      | 2                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6750517Z   system-images;android-33;android-automotive-distant-display-playstore;arm64-v8a | 2                 | Automotive Distant Display with Google Play arm64-v8a System Image
+2026-06-28T22:13:24.6752671Z   system-images;android-33;android-automotive-distant-display-playstore;x86_64    | 2                 | Automotive Distant Display with Google Play x86_64 System Image   
+2026-06-28T22:13:24.6754459Z   system-images;android-33;android-automotive;arm64-v8a                           | 5                 | Android Automotive with Google APIs arm64-v8a System Image        
+2026-06-28T22:13:24.6756092Z   system-images;android-33;android-automotive;x86_64                              | 5                 | Android Automotive with Google APIs x86_64 System Image           
+2026-06-28T22:13:24.6757641Z   system-images;android-33;android-desktop;arm64-v8a                              | 4                 | Desktop ARM 64 v8a System Image                                   
+2026-06-28T22:13:24.6759095Z   system-images;android-33;android-desktop;x86_64                                 | 4                 | Desktop Intel x86_64 Atom System Image                            
+2026-06-28T22:13:24.6760513Z   system-images;android-33;android-tv;arm64-v8a                                   | 5                 | Android TV ARM 64 v8a System Image                                
+2026-06-28T22:13:24.6761852Z   system-images;android-33;android-tv;x86                                         | 5                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6763246Z   system-images;android-33;android-wear;arm64-v8a                                 | 4                 | Wear OS 4 ARM 64 v8a System Image                                 
+2026-06-28T22:13:24.6764114Z   system-images;android-33;android-wear;x86_64                                    | 4                 | Wear OS 4 Intel x86_64 Atom System Image                          
+2026-06-28T22:13:24.6765237Z   system-images;android-33;aosp_atd;arm64-v8a                                     | 2                 | AOSP ATD ARM 64 v8a System Image                                  
+2026-06-28T22:13:24.6766368Z   system-images;android-33;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                           
+2026-06-28T22:13:24.6767168Z   system-images;android-33;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6767968Z   system-images;android-33;default;x86_64                                         | 2                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6768774Z   system-images;android-33;google-tv;arm64-v8a                                    | 5                 | Google TV ARM 64 v8a System Image                                 
+2026-06-28T22:13:24.6769577Z   system-images;android-33;google-tv;x86                                          | 5                 | Google TV Intel x86 Atom System Image                             
+2026-06-28T22:13:24.6770398Z   system-images;android-33;google_apis;arm64-v8a                                  | 17                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6771228Z   system-images;android-33;google_apis;x86_64                                     | 17                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6772210Z   system-images;android-33;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6773341Z   system-images;android-33;google_apis_playstore;x86_64                           | 9                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6774208Z   system-images;android-33;google_atd;arm64-v8a                                   | 2                 | Google APIs ATD ARM 64 v8a System Image                           
+2026-06-28T22:13:24.6775052Z   system-images;android-33;google_atd;x86_64                                      | 2                 | Google APIs ATD Intel x86_64 Atom System Image                    
+2026-06-28T22:13:24.6776040Z   system-images;android-34-ext10;google_apis_playstore;arm64-v8a                  | 2                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6776990Z   system-images;android-34-ext10;google_apis_playstore;x86_64                     | 2                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6777893Z   system-images;android-34-ext11;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6778793Z   system-images;android-34-ext11;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6779698Z   system-images;android-34-ext12;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6780602Z   system-images;android-34-ext12;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6781532Z   system-images;android-34-ext8;google_apis_playstore;arm64-v8a                   | 2                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6782667Z   system-images;android-34-ext8;google_apis_playstore;x86_64                      | 2                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6783651Z   system-images;android-34-ext9;android-automotive-playstore;arm64-v8a            | 4                 | Android Automotive with Google Play arm64-v8a System Image        
+2026-06-28T22:13:24.6784649Z   system-images;android-34-ext9;android-automotive-playstore;x86_64               | 4                 | Android Automotive with Google Play x86_64 System Image           
+2026-06-28T22:13:24.6785776Z   system-images;android-34-ext9;android-automotive;arm64-v8a                      | 5                 | Android Automotive with Google APIs arm64-v8a System Image        
+2026-06-28T22:13:24.6786710Z   system-images;android-34-ext9;android-automotive;x86_64                         | 5                 | Android Automotive with Google APIs x86_64 System Image           
+2026-06-28T22:13:24.6787592Z   system-images;android-34;android-desktop;arm64-v8a                              | 1                 | Desktop ARM 64 v8a System Image                                   
+2026-06-28T22:13:24.6788454Z   system-images;android-34;android-desktop;x86_64                                 | 1                 | Desktop Intel x86_64 Atom System Image                            
+2026-06-28T22:13:24.6789289Z   system-images;android-34;android-tv;arm64-v8a                                   | 3                 | Android TV ARM 64 v8a System Image                                
+2026-06-28T22:13:24.6790110Z   system-images;android-34;android-tv;x86                                         | 3                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6790931Z   system-images;android-34;android-wear;arm64-v8a                                 | 1                 | Wear OS 5 ARM 64 v8a System Image                                 
+2026-06-28T22:13:24.6791868Z   system-images;android-34;android-wear;x86_64                                    | 1                 | Wear OS 5 Intel x86_64 Atom System Image                          
+2026-06-28T22:13:24.6792963Z   system-images;android-34;aosp_atd;arm64-v8a                                     | 2                 | AOSP ATD ARM 64 v8a System Image                                  
+2026-06-28T22:13:24.6793795Z   system-images;android-34;aosp_atd;x86_64                                        | 2                 | AOSP ATD Intel x86_64 Atom System Image                           
+2026-06-28T22:13:24.6794600Z   system-images;android-34;default;arm64-v8a                                      | 4                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6795391Z   system-images;android-34;default;x86_64                                         | 4                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6796196Z   system-images;android-34;google-tv;arm64-v8a                                    | 3                 | Google TV ARM 64 v8a System Image                                 
+2026-06-28T22:13:24.6796997Z   system-images;android-34;google-tv;x86                                          | 3                 | Google TV Intel x86 Atom System Image                             
+2026-06-28T22:13:24.6797818Z   system-images;android-34;google-xr;arm64-v8a                                    | 7                 | Google Play XR ARM 64 v8a System Image (Developer Preview)        
+2026-06-28T22:13:24.6798675Z   system-images;android-34;google-xr;x86_64                                       | 7                 | Google Play XR Intel x86_64 Atom System Image (Developer Preview) 
+2026-06-28T22:13:24.6799533Z   system-images;android-34;google_apis;arm64-v8a                                  | 14                | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6800370Z   system-images;android-34;google_apis;x86_64                                     | 14                | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6801228Z   system-images;android-34;google_apis_playstore;arm64-v8a                        | 14                | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6802104Z   system-images;android-34;google_apis_playstore;x86_64                           | 14                | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6803331Z   system-images;android-34;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 System Image                               
+2026-06-28T22:13:24.6804162Z   system-images;android-34;google_atd;x86_64                                      | 1                 | Google APIs ATD Intel x86_64 Atom System Image                    
+2026-06-28T22:13:24.6805031Z   system-images;android-35-ext14;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6805931Z   system-images;android-35-ext14;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6806887Z   system-images;android-35-ext15;android-automotive-playstore;arm64-v8a           | 3                 | Android Automotive with Google Play arm64-v8a System Image        
+2026-06-28T22:13:24.6807902Z   system-images;android-35-ext15;android-automotive-playstore;x86_64              | 3                 | Android Automotive with Google Play x86_64 System Image           
+2026-06-28T22:13:24.6808859Z   system-images;android-35-ext15;android-automotive;arm64-v8a                     | 3                 | Android Automotive with Google APIs arm64-v8a System Image        
+2026-06-28T22:13:24.6809923Z   system-images;android-35-ext15;android-automotive;x86_64                        | 3                 | Android Automotive with Google APIs x86_64 System Image           
+2026-06-28T22:13:24.6810806Z   system-images;android-35-ext15;android-wear;arm64-v8a                           | 1                 | Wear OS 5.1 ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6811653Z   system-images;android-35-ext15;android-wear;x86_64                              | 1                 | Wear OS 5.1 Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6812805Z   system-images;android-35-ext15;google_apis;arm64-v8a                            | 1                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6813851Z   system-images;android-35-ext15;google_apis;x86_64                               | 1                 | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6814740Z   system-images;android-35-ext15;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6815662Z   system-images;android-35-ext15;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6816531Z   system-images;android-35;aosp_atd;arm64-v8a                                     | 1                 | AOSP ATD ARM 64 System Image                                      
+2026-06-28T22:13:24.6817341Z   system-images;android-35;aosp_atd;x86_64                                        | 1                 | AOSP ATD Intel x86_64 Atom System Image                           
+2026-06-28T22:13:24.6818140Z   system-images;android-35;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6818941Z   system-images;android-35;default;x86_64                                         | 2                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6819757Z   system-images;android-35;google_apis;arm64-v8a                                  | 9                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6820586Z   system-images;android-35;google_apis;x86_64                                     | 9                 | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6821436Z   system-images;android-35;google_apis_playstore;arm64-v8a                        | 9                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6822692Z   system-images;android-35;google_apis_playstore;x86_64                           | 9                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6823612Z   system-images;android-35;google_apis_playstore_ps16k;arm64-v8a                  | 5                 | 16 KB Page Size Google Play ARM 64 v8a System Image               
+2026-06-28T22:13:24.6824513Z   system-images;android-35;google_apis_playstore_ps16k;x86_64                     | 5                 | 16 KB Page Size Google Play Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6825426Z   system-images;android-35;google_apis_playstore_tablet;arm64-v8a                 | 9                 | Google Play Tablet ARM 64 v8a System Image                        
+2026-06-28T22:13:24.6826343Z   system-images;android-35;google_apis_playstore_tablet;x86_64                    | 9                 | Google Play Tablet Intel x86_64 Atom System Image                 
+2026-06-28T22:13:24.6827238Z   system-images;android-35;google_apis_ps16k;arm64-v8a                            | 5                 | 16 KB Page Size Google APIs ARM 64 v8a System Image               
+2026-06-28T22:13:24.6828228Z   system-images;android-35;google_apis_ps16k;x86_64                               | 5                 | 16 KB Page Size Google APIs Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6829082Z   system-images;android-35;google_apis_tablet;arm64-v8a                           | 2                 | Google APIs Tablet ARM 64 v8a System Image                        
+2026-06-28T22:13:24.6829946Z   system-images;android-35;google_apis_tablet;x86_64                              | 2                 | Google APIs Tablet Intel x86_64 Atom System Image                 
+2026-06-28T22:13:24.6830790Z   system-images;android-35;google_atd;arm64-v8a                                   | 1                 | Google APIs ATD ARM 64 System Image                               
+2026-06-28T22:13:24.6831612Z   system-images;android-35;google_atd;x86_64                                      | 1                 | Google APIs ATD Intel x86_64 Atom System Image                    
+2026-06-28T22:13:24.6832687Z   system-images;android-36-ext18;google_apis;arm64-v8a                            | 1                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6833614Z   system-images;android-36-ext18;google_apis;x86_64                               | 1                 | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6834501Z   system-images;android-36-ext18;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6835411Z   system-images;android-36-ext18;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6836303Z   system-images;android-36-ext19;google_apis;arm64-v8a                            | 1                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6837158Z   system-images;android-36-ext19;google_apis;x86_64                               | 1                 | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6838041Z   system-images;android-36-ext19;google_apis_playstore;arm64-v8a                  | 1                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6838942Z   system-images;android-36-ext19;google_apis_playstore;x86_64                     | 1                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6839837Z   system-images;android-36.1;android-wear-signed;arm64-v8a                        | 1                 | Wear OS 6.1 ARM 64 v8a System Image (signed)                      
+2026-06-28T22:13:24.6840851Z   system-images;android-36.1;android-wear-signed;x86_64                           | 1                 | Wear OS 6.1 Intel x86_64 Atom System Image (signed)               
+2026-06-28T22:13:24.6841709Z   system-images;android-36.1;google_apis;arm64-v8a                                | 4                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6842760Z   system-images;android-36.1;google_apis;x86_64                                   | 4                 | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6843627Z   system-images;android-36.1;google_apis_playstore;arm64-v8a                      | 4                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6844518Z   system-images;android-36.1;google_apis_playstore;x86_64                         | 4                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6845413Z   system-images;android-36.1;google_apis_playstore_ps16k;arm64-v8a                | 4                 | 16 KB Page Size Google Play ARM 64 v8a System Image               
+2026-06-28T22:13:24.6846322Z   system-images;android-36.1;google_apis_playstore_ps16k;x86_64                   | 4                 | 16 KB Page Size Google Play Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6847345Z   system-images;android-36.1;google_apis_ps16k;arm64-v8a                          | 4                 | 16 KB Page Size Google APIs ARM 64 v8a System Image               
+2026-06-28T22:13:24.6848197Z   system-images;android-36.1;google_apis_ps16k;x86_64                             | 4                 | 16 KB Page Size Google APIs Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6849038Z   system-images;android-36;android-tv;arm64-v8a                                   | 4                 | Android TV ARM 64 v8a System Image                                
+2026-06-28T22:13:24.6849855Z   system-images;android-36;android-tv;x86                                         | 4                 | Android TV Intel x86 Atom System Image                            
+2026-06-28T22:13:24.6850671Z   system-images;android-36;android-tv;x86_64                                      | 4                 | Android TV Intel x86_64 Atom System Image                         
+2026-06-28T22:13:24.6851520Z   system-images;android-36;android-wear-signed;arm64-v8a                          | 1                 | Wear OS 6.0 ARM 64 v8a System Image (signed)                      
+2026-06-28T22:13:24.6852578Z   system-images;android-36;android-wear-signed;x86_64                             | 1                 | Wear OS 6.0 Intel x86_64 Atom System Image (signed)               
+2026-06-28T22:13:24.6853440Z   system-images;android-36;default;arm64-v8a                                      | 2                 | ARM 64 v8a System Image                                           
+2026-06-28T22:13:24.6854240Z   system-images;android-36;default;x86_64                                         | 2                 | Intel x86_64 Atom System Image                                    
+2026-06-28T22:13:24.6855082Z   system-images;android-36;google-tv-ps16k;arm64-v8a                              | 4                 | 16 KB Page Size Google TV ARM 64 v8a System Image                 
+2026-06-28T22:13:24.6855938Z   system-images;android-36;google-tv-ps16k;x86_64                                 | 4                 | 16 KB Page Size Google TV Intel x86_64 Atom System Image          
+2026-06-28T22:13:24.6856772Z   system-images;android-36;google-tv;arm64-v8a                                    | 4                 | Google TV ARM 64 v8a System Image                                 
+2026-06-28T22:13:24.6857580Z   system-images;android-36;google-tv;x86                                          | 4                 | Google TV Intel x86 Atom System Image                             
+2026-06-28T22:13:24.6858375Z   system-images;android-36;google-tv;x86_64                                       | 4                 | Google TV Intel x86_64 Atom System Image                          
+2026-06-28T22:13:24.6859347Z   system-images;android-36;google_apis;arm64-v8a                                  | 7                 | Google APIs ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6860177Z   system-images;android-36;google_apis;x86_64                                     | 7                 | Google APIs Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6861029Z   system-images;android-36;google_apis_playstore;arm64-v8a                        | 7                 | Google Play ARM 64 v8a System Image                               
+2026-06-28T22:13:24.6861903Z   system-images;android-36;google_apis_playstore;x86_64                           | 7                 | Google Play Intel x86_64 Atom System Image                        
+2026-06-28T22:13:24.6863145Z   system-images;android-36;google_apis_playstore_ps16k;arm64-v8a                  | 7                 | 16 KB Page Size Google Play ARM 64 v8a System Image               
+2026-06-28T22:13:24.6864074Z   system-images;android-36;google_apis_playstore_ps16k;x86_64                     | 7                 | 16 KB Page Size Google Play Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6865116Z   system-images;android-36;google_apis_ps16k;arm64-v8a                            | 7                 | 16 KB Page Size Google APIs ARM 64 v8a System Image               
+2026-06-28T22:13:24.6865966Z   system-images;android-36;google_apis_ps16k;x86_64                               | 7                 | 16 KB Page Size Google APIs Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6866846Z   system-images;android-37.0;google_apis_playstore_ps16k;arm64-v8a                | 6                 | 16 KB Page Size Google Play ARM 64 v8a System Image               
+2026-06-28T22:13:24.6867744Z   system-images;android-37.0;google_apis_playstore_ps16k;x86_64                   | 6                 | 16 KB Page Size Google Play Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6868629Z   system-images;android-37.0;google_apis_ps16k;arm64-v8a                          | 6                 | 16 KB Page Size Google APIs ARM 64 v8a System Image               
+2026-06-28T22:13:24.6869481Z   system-images;android-37.0;google_apis_ps16k;x86_64                             | 6                 | 16 KB Page Size Google APIs Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6870374Z   system-images;android-CANARY;google_apis_playstore_ps16k;arm64-v8a              | 13                | 16 KB Page Size Google Play ARM 64 v8a System Image               
+2026-06-28T22:13:24.6871298Z   system-images;android-CANARY;google_apis_playstore_ps16k;x86_64                 | 13                | 16 KB Page Size Google Play Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6872192Z   system-images;android-CANARY;google_apis_ps16k;arm64-v8a                        | 13                | 16 KB Page Size Google APIs ARM 64 v8a System Image               
+2026-06-28T22:13:24.6873244Z   system-images;android-CANARY;google_apis_ps16k;x86_64                           | 13                | 16 KB Page Size Google APIs Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6874174Z   system-images;android-CinnamonBun;google_apis_playstore_ps16k;arm64-v8a         | 5                 | 16 KB Page Size Google Play ARM 64 v8a System Image               
+2026-06-28T22:13:24.6875132Z   system-images;android-CinnamonBun;google_apis_playstore_ps16k;x86_64            | 5                 | 16 KB Page Size Google Play Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6876064Z   system-images;android-CinnamonBun;google_apis_ps16k;arm64-v8a                   | 5                 | 16 KB Page Size Google APIs ARM 64 v8a System Image               
+2026-06-28T22:13:24.6877003Z   system-images;android-CinnamonBun;google_apis_ps16k;x86_64                      | 5                 | 16 KB Page Size Google APIs Intel x86_64 Atom System Image        
+2026-06-28T22:13:24.6877644Z 
+2026-06-28T22:13:25.6528975Z # Check that aidl can be executed
+2026-06-28T22:13:25.6531681Z # Search for Aidl
+2026-06-28T22:13:25.6532240Z #  -> found at /usr/local/lib/android/sdk/build-tools/37.0.0/aidl
+2026-06-28T22:13:25.6533793Z # Run '/usr/local/lib/android/sdk/build-tools/37.0.0/aidl' ...
+2026-06-28T22:13:25.6534364Z # Cwd None
+2026-06-28T22:13:26.8338220Z # Downloading platform api target if necessary
+2026-06-28T22:13:26.8342421Z # Run '/usr/local/lib/android/sdk/tools/bin/sdkmanager --sdk_root=/usr/local/lib/android/sdk platforms;android-33' ...
+2026-06-28T22:13:26.8343767Z # Cwd /usr/local/lib/android/sdk
+2026-06-28T22:13:27.5161252Z Loading package information...                                                  
+2026-06-28T22:13:27.6043878Z Loading local repository...                                                     
+2026-06-28T22:13:27.6044718Z [                                       ] 3% Loading local repository...        
+2026-06-28T22:13:27.6125470Z [                                       ] 3% Fetch remote repository...         
+2026-06-28T22:13:27.9023988Z [=                                      ] 3% Fetch remote repository...         
+2026-06-28T22:13:27.9554628Z [=                                      ] 4% Fetch remote repository...         
+2026-06-28T22:13:27.9769765Z [=                                      ] 5% Fetch remote repository...         
+2026-06-28T22:13:28.0096238Z [==                                     ] 5% Fetch remote repository...         
+2026-06-28T22:13:28.0629824Z [==                                     ] 6% Fetch remote repository...         
+2026-06-28T22:13:28.1341004Z [==                                     ] 7% Fetch remote repository...         
+2026-06-28T22:13:28.1363247Z [==                                     ] 7% Computing updates...               
+2026-06-28T22:13:28.1496525Z [===                                    ] 8% Computing updates...               
+2026-06-28T22:13:28.1801738Z [===                                    ] 10% Computing updates...              
+2026-06-28T22:13:28.5233876Z [===                                    ] 10% Installing Android SDK Platform 33
+2026-06-28T22:13:28.5843643Z [===                                    ] 10% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.6237986Z [====                                   ] 10% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.6763829Z [====                                   ] 11% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.7238416Z [====                                   ] 12% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.7492988Z [=====                                  ] 13% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.7734843Z [=====                                  ] 14% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.7875287Z [=====                                  ] 15% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.7956708Z [======                                 ] 15% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.8119840Z [======                                 ] 16% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.8325477Z [======                                 ] 17% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.8483497Z [=======                                ] 18% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.8728994Z [=======                                ] 19% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.8853861Z [=======                                ] 20% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.8954081Z [========                               ] 20% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.9267179Z [========                               ] 21% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.9528326Z [========                               ] 22% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:28.9696818Z [=========                              ] 23% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.0021913Z [=========                              ] 24% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.0154448Z [=========                              ] 25% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.0248854Z [==========                             ] 25% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.0535855Z [==========                             ] 26% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.0764076Z [==========                             ] 27% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.1038001Z [===========                            ] 28% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.1334356Z [===========                            ] 29% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.1446373Z [===========                            ] 30% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.1579708Z [============                           ] 30% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.1742868Z [============                           ] 31% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.1970994Z [============                           ] 32% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.1973950Z [============                           ] 33% Downloading platform-33-ext3_r03.z
+2026-06-28T22:13:29.8197632Z [============                           ] 33% Unzipping...                      
+2026-06-28T22:13:29.8202187Z [============                           ] 33% Unzipping... android-13/          
+2026-06-28T22:13:29.8266600Z [============                           ] 33% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.8543655Z [=============                          ] 33% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.8776629Z [=============                          ] 34% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.8885484Z [=============                          ] 35% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9002985Z [==============                         ] 35% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9180854Z [==============                         ] 36% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9377504Z [==============                         ] 37% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9478388Z [===============                        ] 38% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9658343Z [===============                        ] 39% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9754415Z [===============                        ] 40% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9834107Z [================                       ] 40% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9974599Z [================                       ] 41% Unzipping... android-13/android.ja
+2026-06-28T22:13:29.9975560Z [================                       ] 41% Unzipping... android-13/optional/ 
+2026-06-28T22:13:29.9999924Z [================                       ] 41% Unzipping... android-13/optional/a
+2026-06-28T22:13:30.0028214Z [================                       ] 41% Unzipping... android-13/optional/l
+2026-06-28T22:13:30.0054608Z [================                       ] 41% Unzipping... android-13/optional/o
+2026-06-28T22:13:30.0059400Z [================                       ] 41% Unzipping... android-13/optional/a
+2026-06-28T22:13:30.0062314Z [================                       ] 41% Unzipping... android-13/optional/o
+2026-06-28T22:13:30.0177087Z [================                       ] 41% Unzipping... android-13/templates/
+2026-06-28T22:13:30.0290419Z [================                       ] 41% Unzipping... android-13/core-for-s
+2026-06-28T22:13:30.0306281Z [================                       ] 41% Unzipping... android-13/build.prop
+2026-06-28T22:13:30.0320027Z [================                       ] 41% Unzipping... android-13/android-st
+2026-06-28T22:13:30.0484244Z [================                       ] 42% Unzipping... android-13/android-st
+2026-06-28T22:13:30.0640428Z [=================                      ] 43% Unzipping... android-13/android-st
+2026-06-28T22:13:30.0679125Z [=================                      ] 44% Unzipping... android-13/android-st
+2026-06-28T22:13:30.0684436Z [=================                      ] 44% Unzipping... android-13/uiautomato
+2026-06-28T22:13:30.0688058Z [=================                      ] 44% Unzipping... android-13/source.pro
+2026-06-28T22:13:30.0688884Z [=================                      ] 44% Unzipping... android-13/data/     
+2026-06-28T22:13:30.0691132Z [=================                      ] 44% Unzipping... android-13/data/servi
+2026-06-28T22:13:30.0776629Z [=================                      ] 44% Unzipping... android-13/data/NOTIC
+2026-06-28T22:13:30.0803870Z [=================                      ] 44% Unzipping... android-13/data/widge
+2026-06-28T22:13:30.0804554Z [=================                      ] 44% Unzipping... android-13/data/broad
+2026-06-28T22:13:30.0980173Z [=================                      ] 44% Unzipping... android-13/data/api-v
+2026-06-28T22:13:30.0988336Z [=================                      ] 44% Unzipping... android-13/data/featu
+2026-06-28T22:13:30.1004491Z [=================                      ] 44% Unzipping... android-13/data/annot
+2026-06-28T22:13:30.1011178Z [=================                      ] 44% Unzipping... android-13/data/res/ 
+2026-06-28T22:13:30.1026929Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.1045765Z [=================                      ] 44% Unzipping... android-13/data/res/l
+2026-06-28T22:13:30.1367223Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.1375360Z [=================                      ] 44% Unzipping... android-13/data/res/m
+2026-06-28T22:13:30.1535852Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.1561940Z [=================                      ] 44% Unzipping... android-13/data/res/a
+2026-06-28T22:13:30.1735925Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.2152898Z [=================                      ] 44% Unzipping... android-13/data/res/d
+2026-06-28T22:13:30.2218976Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.2223939Z [=================                      ] 44% Unzipping... android-13/data/res/x
+2026-06-28T22:13:30.2247002Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.2250534Z [=================                      ] 44% Unzipping... android-13/data/res/l
+2026-06-28T22:13:30.2254625Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.2877443Z [=================                      ] 44% Unzipping... android-13/data/res/l
+2026-06-28T22:13:30.2922152Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.2927643Z [=================                      ] 44% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.3156175Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.3159125Z [=================                      ] 44% Unzipping... android-13/data/res/x
+2026-06-28T22:13:30.3263299Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.3264048Z [=================                      ] 44% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.3398382Z [=================                      ] 44% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.3514509Z [=================                      ] 44% Unzipping... android-13/data/res/a
+2026-06-28T22:13:30.3863275Z [=================                      ] 45% Unzipping... android-13/data/res/a
+2026-06-28T22:13:30.4104622Z [=================                      ] 45% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.4108487Z [=================                      ] 45% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.4152729Z [=================                      ] 45% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.4160503Z [=================                      ] 45% Unzipping... android-13/data/res/c
+2026-06-28T22:13:30.4163468Z [=================                      ] 45% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.5443866Z [=================                      ] 45% Unzipping... android-13/data/res/d
+2026-06-28T22:13:30.6645552Z [==================                     ] 45% Unzipping... android-13/data/res/d
+2026-06-28T22:13:30.6758525Z [==================                     ] 46% Unzipping... android-13/data/res/d
+2026-06-28T22:13:30.6790448Z [==================                     ] 46% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.6810351Z [==================                     ] 46% Unzipping... android-13/data/res/t
+2026-06-28T22:13:30.6840703Z [==================                     ] 46% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.6853329Z [==================                     ] 46% Unzipping... android-13/data/res/x
+2026-06-28T22:13:30.7033682Z [==================                     ] 46% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.7038396Z [==================                     ] 46% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.7256745Z [==================                     ] 46% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.7260764Z [==================                     ] 46% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.7274806Z [==================                     ] 46% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.7277204Z [==================                     ] 46% Unzipping... android-13/data/res/l
+2026-06-28T22:13:30.7578361Z [==================                     ] 46% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.7582344Z [==================                     ] 46% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.7591415Z [==================                     ] 46% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.7628002Z [==================                     ] 46% Unzipping... android-13/data/res/d
+2026-06-28T22:13:30.7647478Z [==================                     ] 47% Unzipping... android-13/data/res/d
+2026-06-28T22:13:30.7734805Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.7781148Z [==================                     ] 47% Unzipping... android-13/data/res/d
+2026-06-28T22:13:30.8179668Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.8183105Z [==================                     ] 47% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.8278024Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.8282839Z [==================                     ] 47% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.8577922Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.8580401Z [==================                     ] 47% Unzipping... android-13/data/res/m
+2026-06-28T22:13:30.8592691Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.8596541Z [==================                     ] 47% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.8627997Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.8635446Z [==================                     ] 47% Unzipping... android-13/data/res/c
+2026-06-28T22:13:30.8642341Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.8646638Z [==================                     ] 47% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.8683460Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.8687990Z [==================                     ] 47% Unzipping... android-13/data/res/r
+2026-06-28T22:13:30.8690852Z [==================                     ] 47% Unzipping... android-13/data/res/x
+2026-06-28T22:13:30.8914333Z [==================                     ] 47% Unzipping... android-13/data/res/v
+2026-06-28T22:13:30.9457866Z [==================                     ] 47% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.0080817Z [===================                    ] 48% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.0163681Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.0167887Z [===================                    ] 48% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.0201170Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.0208188Z [===================                    ] 48% Unzipping... android-13/data/res/c
+2026-06-28T22:13:31.0365355Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.0370004Z [===================                    ] 48% Unzipping... android-13/data/res/m
+2026-06-28T22:13:31.0456980Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.0461289Z [===================                    ] 48% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.0747330Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.0750176Z [===================                    ] 48% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.0796605Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.0804285Z [===================                    ] 48% Unzipping... android-13/data/res/i
+2026-06-28T22:13:31.0913132Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.0941959Z [===================                    ] 48% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.0996839Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.1003084Z [===================                    ] 48% Unzipping... android-13/data/res/m
+2026-06-28T22:13:31.1013120Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.1905357Z [===================                    ] 48% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2027212Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2030733Z [===================                    ] 48% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2085487Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2131416Z [===================                    ] 48% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2210066Z [===================                    ] 48% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2221612Z [===================                    ] 49% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2275983Z [===================                    ] 49% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2303153Z [===================                    ] 50% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2321913Z [====================                   ] 50% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2389836Z [====================                   ] 50% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2451585Z [====================                   ] 50% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2527947Z [====================                   ] 50% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2548286Z [====================                   ] 50% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2575855Z [====================                   ] 50% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2623933Z [====================                   ] 50% Unzipping... android-13/data/res/x
+2026-06-28T22:13:31.2749858Z [====================                   ] 50% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.2752935Z [====================                   ] 50% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.2866810Z [====================                   ] 50% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.3639887Z [====================                   ] 50% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.4997303Z [====================                   ] 51% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.5167879Z [====================                   ] 51% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.5171320Z [====================                   ] 51% Unzipping... android-13/data/res/a
+2026-06-28T22:13:31.5549456Z [====================                   ] 51% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.5553037Z [====================                   ] 51% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.5604086Z [====================                   ] 51% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.5608720Z [====================                   ] 51% Unzipping... android-13/data/res/m
+2026-06-28T22:13:31.5612869Z [====================                   ] 51% Unzipping... android-13/data/res/x
+2026-06-28T22:13:31.5726408Z [====================                   ] 51% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.5749051Z [====================                   ] 51% Unzipping... android-13/data/res/a
+2026-06-28T22:13:31.5929090Z [====================                   ] 51% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6004338Z [====================                   ] 51% Unzipping... android-13/data/res/i
+2026-06-28T22:13:31.6170296Z [====================                   ] 51% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6191686Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6195971Z [====================                   ] 52% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.6233956Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6238354Z [====================                   ] 52% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.6250601Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6255084Z [====================                   ] 52% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.6371949Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6382196Z [====================                   ] 52% Unzipping... android-13/data/res/l
+2026-06-28T22:13:31.6393029Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6397727Z [====================                   ] 52% Unzipping... android-13/data/res/l
+2026-06-28T22:13:31.6496785Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6535513Z [====================                   ] 52% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.6538204Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6540773Z [====================                   ] 52% Unzipping... android-13/data/res/l
+2026-06-28T22:13:31.6625084Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6628834Z [====================                   ] 52% Unzipping... android-13/data/res/m
+2026-06-28T22:13:31.6707821Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6717888Z [====================                   ] 52% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.6730003Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6749671Z [====================                   ] 52% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.6922397Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6925215Z [====================                   ] 52% Unzipping... android-13/data/res/l
+2026-06-28T22:13:31.6960135Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.6976838Z [====================                   ] 52% Unzipping... android-13/data/res/l
+2026-06-28T22:13:31.7081428Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.7103196Z [====================                   ] 52% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.7103946Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.7104780Z [====================                   ] 52% Unzipping... android-13/data/res/l
+2026-06-28T22:13:31.7122729Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.7276275Z [====================                   ] 52% Unzipping... android-13/data/res/c
+2026-06-28T22:13:31.7372306Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.7376543Z [====================                   ] 52% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.7382798Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.9101435Z [====================                   ] 52% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.9149135Z [====================                   ] 52% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.9157726Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.9162869Z [=====================                  ] 53% Unzipping... android-13/data/res/m
+2026-06-28T22:13:31.9234059Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.9235067Z [=====================                  ] 53% Unzipping... android-13/data/res/d
+2026-06-28T22:13:31.9241406Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.9246180Z [=====================                  ] 53% Unzipping... android-13/data/res/m
+2026-06-28T22:13:31.9265246Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.9268594Z [=====================                  ] 53% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.9279579Z [=====================                  ] 53% Unzipping... android-13/data/res/l
+2026-06-28T22:13:31.9306659Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:31.9310068Z [=====================                  ] 53% Unzipping... android-13/data/res/r
+2026-06-28T22:13:31.9346316Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:32.0497610Z [=====================                  ] 53% Unzipping... android-13/data/res/d
+2026-06-28T22:13:32.0784714Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:32.0788597Z [=====================                  ] 53% Unzipping... android-13/data/res/r
+2026-06-28T22:13:32.0937692Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:32.0984069Z [=====================                  ] 53% Unzipping... android-13/data/res/d
+2026-06-28T22:13:32.0984513Z [=====================                  ] 53% Unzipping... android-13/data/res/v
+2026-06-28T22:13:32.0989794Z [=====================                  ] 54% Unzipping... android-13/data/res/v
+2026-06-28T22:13:32.1003747Z [=====================                  ] 54% Unzipping... android-13/data/res/d
+2026-06-28T22:13:32.1157116Z [=====================                  ] 54% Unzipping... android-13/data/res/v
+2026-06-28T22:13:32.1158578Z [=====================                  ] 54% Unzipping... android-13/data/categ
+2026-06-28T22:13:32.1174083Z [=====================                  ] 54% Unzipping... android-13/data/activ
+2026-06-28T22:13:32.1174810Z [=====================                  ] 54% Unzipping... android-13/sdk.proper
+2026-06-28T22:13:32.1175493Z [=====================                  ] 54% Unzipping... android-13/skins/    
+2026-06-28T22:13:32.1186279Z [=====================                  ] 54% Unzipping... android-13/skins/WXGA
+2026-06-28T22:13:32.1219678Z [=====================                  ] 54% Unzipping... android-13/skins/WQVG
+2026-06-28T22:13:32.1254832Z [=====================                  ] 54% Unzipping... android-13/skins/NOTI
+2026-06-28T22:13:32.1276813Z [=====================                  ] 54% Unzipping... android-13/skins/HVGA
+2026-06-28T22:13:32.1297054Z [=====================                  ] 54% Unzipping... android-13/skins/WVGA
+2026-06-28T22:13:32.1323651Z [=====================                  ] 54% Unzipping... android-13/skins/WQVG
+2026-06-28T22:13:32.1342665Z [=====================                  ] 54% Unzipping... android-13/skins/WVGA
+2026-06-28T22:13:32.1361730Z [=====================                  ] 54% Unzipping... android-13/skins/QVGA
+2026-06-28T22:13:32.1384135Z [=====================                  ] 54% Unzipping... android-13/skins/WXGA
+2026-06-28T22:13:32.1406650Z [=====================                  ] 54% Unzipping... android-13/skins/WSVG
+2026-06-28T22:13:32.1426506Z [=====================                  ] 54% Unzipping... android-13/skins/WXGA
+2026-06-28T22:13:32.1430725Z [=====================                  ] 54% Unzipping... android-13/framework.
+2026-06-28T22:13:32.1682144Z [=====================                  ] 55% Unzipping... android-13/framework.
+2026-06-28T22:13:32.1683078Z [=======================================] 100% Unzipping... android-13/framework
+2026-06-28T22:13:32.5316994Z 
+2026-06-28T22:13:33.5320016Z # Android packages installation done.
+2026-06-28T22:13:33.5326375Z # Run '/usr/bin/python3 -m pythonforandroid.toolchain aab -h --color=always --storage-dir=/home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a --ndk-api=24 --ignore-setup-py --debug' ...
+2026-06-28T22:13:33.5327963Z # Cwd /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/python-for-android
+2026-06-28T22:13:34.7517982Z # Check application requirements
+2026-06-28T22:13:34.7518442Z # Compile platform
+2026-06-28T22:13:34.7521355Z # Run '/usr/bin/python3 -m pythonforandroid.toolchain create --dist_name=zombiesurvival --bootstrap=sdl2 --requirements=python3==3.11.6,pygame --arch=arm64-v8a --arch=armeabi-v7a --copy-libs --color=always --storage-dir=/home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a --ndk-api=24 --ignore-setup-py --debug' ...
+2026-06-28T22:13:34.7523910Z # Cwd /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/python-for-android
+2026-06-28T22:13:34.8318712Z [WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+2026-06-28T22:13:34.8319651Z [WARNING]: Please report any issues to the python-for-android issue tracker.
+2026-06-28T22:13:34.8799186Z [WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+2026-06-28T22:13:34.8799985Z [WARNING]: Please report any issues to the python-for-android issue tracker.
+2026-06-28T22:13:34.8898911Z [1m[INFO][0m:    Recipe python3: version "3.11.6" requested
+2026-06-28T22:13:34.8899743Z [1m[INFO][0m:    Will compile for the following archs: arm64-v8a, armeabi-v7a
+2026-06-28T22:13:34.8900990Z [1m[90m[DEBUG][39m[0m:   Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a
+2026-06-28T22:13:34.8903421Z [1m[90m[DEBUG][39m[0m:   Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build
+2026-06-28T22:13:34.8904968Z [1m[90m[DEBUG][39m[0m:   Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists
+2026-06-28T22:13:34.8917920Z [1m[90m[DEBUG][39m[0m:   Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/bootstrap_builds
+2026-06-28T22:13:34.8920253Z [1m[90m[DEBUG][39m[0m:   Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/other_builds
+2026-06-28T22:13:34.8921723Z [1m[INFO][0m:    Found Android API target in $ANDROIDAPI: 33
+2026-06-28T22:13:36.1924566Z [1m[INFO][0m:    Available Android APIs are (0, 33, 34, 34, 34, 34, 34, 35, 35, 35, 36, 36, 36)
+2026-06-28T22:13:36.1925409Z [1m[INFO][0m:    Requested API target 33 is available, continuing.
+2026-06-28T22:13:36.1927204Z [1m[INFO][0m:    Found NDK dir in $ANDROIDNDK: /home/runner/.buildozer/android/platform/android-ndk-r28c
+2026-06-28T22:13:36.1928138Z [1m[INFO][0m:    Found NDK version 28c
+2026-06-28T22:13:36.1934047Z [1m[31m[WARNING][39m[0m: Maximum recommended NDK version is 28c, but newer versions may work.
+2026-06-28T22:13:36.1935038Z [1m[31m[WARNING][39m[0m: Newer NDKs may not be fully supported by p4a.
+2026-06-28T22:13:36.1935623Z [1m[INFO][0m:    Getting NDK API version (i.e. minimum supported API) from user argument
+2026-06-28T22:13:36.1936472Z [1m[INFO][0m:    ccache is missing, the build will not be optimized in the future.
+2026-06-28T22:13:36.2404043Z [1m[90m[DEBUG][39m[0m:   All possible dists: []
+2026-06-28T22:13:36.2405028Z [1m[90m[DEBUG][39m[0m:   Dist matching name and arch: []
+2026-06-28T22:13:36.2406038Z [1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: []
+2026-06-28T22:13:36.2406789Z [1m[INFO][0m:    No existing dists meet the given requirements!
+2026-06-28T22:13:36.2414392Z [1m[INFO][0m:    [1m[94mNo dist exists that meets your requirements, so one will be built.[0m
+2026-06-28T22:13:36.2559946Z [1m[INFO][0m:    Found a single valid recipe set: ['hostpython3', 'jpeg', 'libffi', 'openssl', 'png', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'sqlite3', 'python3', 'sdl2', 'setuptools', 'pygame']
+2026-06-28T22:13:36.2560915Z [1m[INFO][0m:    The selected bootstrap is sdl2
+2026-06-28T22:13:36.2564067Z [1m[INFO][0m:    [1m[32m# Creating dist with sdl2 bootstrap[0m[39m
+2026-06-28T22:13:36.2564709Z [1m[INFO][0m:    [1m[94mDist will have name zombiesurvival and requirements (python3, pygame)[0m
+2026-06-28T22:13:36.2565826Z [1m[INFO][0m:    Dist contains the following requirements as recipes: ['hostpython3', 'jpeg', 'libffi', 'openssl', 'png', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'sqlite3', 'python3', 'sdl2', 'setuptools', 'pygame']
+2026-06-28T22:13:36.2566757Z [1m[INFO][0m:    Dist will also contain modules () installed from pip
+2026-06-28T22:13:36.2567183Z [1m[INFO][0m:    Dist will be build in mode debug
+2026-06-28T22:13:36.2667905Z [1m[INFO][0m:    [36m-> directory context /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/bootstrap_builds/sdl2[39m
+2026-06-28T22:13:36.2674909Z [1m[INFO][0m:    [36m<- directory context /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/python-for-android[39m
+2026-06-28T22:13:36.2676983Z [1m[90m[DEBUG][39m[0m:   Create directory /home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists/zombiesurvival
+2026-06-28T22:13:36.2678806Z [1m[INFO][0m:    [1m[94mRecipe build order is ['hostpython3', 'jpeg', 'libffi', 'openssl', 'png', 'sdl2_image', 'sdl2_mixer', 'sdl2_ttf', 'sqlite3', 'python3', 'sdl2', 'setuptools', 'pygame'][0m
+2026-06-28T22:13:36.2679614Z [1m[INFO][0m:    [1m[32m# Downloading recipes [0m[39m
+2026-06-28T22:13:36.2680028Z [1m[INFO][0m:    [1m[32mDownloading hostpython3[0m[39m
+2026-06-28T22:13:36.2680599Z [1m[31m[ERROR][39m[0m:   Build failed: python3 should have same version as hostpython3, 3.11.6 != 3.14.2
+2026-06-28T22:13:37.2680967Z # Command failed: ('/usr/bin/python3', '-m', 'pythonforandroid.toolchain', 'create', '--dist_name=zombiesurvival', '--bootstrap=sdl2', '--requirements=python3==3.11.6,pygame', '--arch=arm64-v8a', '--arch=armeabi-v7a', '--copy-libs', '--color=always', '--storage-dir=/home/runner/work/zombie-survival/zombie-survival/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a', '--ndk-api=24', '--ignore-setup-py', '--debug')
+2026-06-28T22:13:37.2684197Z # Error code: 1
+2026-06-28T22:13:37.2684598Z # ENVIRONMENT:
+2026-06-28T22:13:37.2684988Z #     SHELL = '/bin/bash'
+2026-06-28T22:13:37.2694003Z #     SELENIUM_JAR_PATH = '/usr/share/java/selenium-server.jar'
+2026-06-28T22:13:37.2694703Z #     CONDA = '/usr/share/miniconda'
+2026-06-28T22:13:37.2695373Z #     GITHUB_WORKSPACE = '/home/runner/work/zombie-survival/zombie-survival'
+2026-06-28T22:13:37.2696168Z #     JAVA_HOME_11_X64 = '/usr/lib/jvm/temurin-11-jdk-amd64'
+2026-06-28T22:13:37.2696826Z #     JAVA_HOME_25_X64 = '/usr/lib/jvm/temurin-25-jdk-amd64'
+2026-06-28T22:13:37.2697815Z #     GITHUB_PATH = '/home/runner/work/_temp/_runner_file_commands/add_path_e55ad1f8-59ab-410a-9f66-eb0bf7aa8ea5'
+2026-06-28T22:13:37.2698743Z #     GITHUB_ACTION = '__run_3'
+2026-06-28T22:13:37.2699403Z #     JAVA_HOME = '/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64'
+2026-06-28T22:13:37.2700118Z #     GITHUB_RUN_NUMBER = '9'
+2026-06-28T22:13:37.2701096Z #     RUNNER_NAME = 'GitHub Actions 1000000008'
+2026-06-28T22:13:37.2701628Z #     GRADLE_HOME = '/usr/share/gradle-9.6.0'
+2026-06-28T22:13:37.2702166Z #     GITHUB_REPOSITORY_OWNER_ID = '297725311'
+2026-06-28T22:13:37.2703074Z #     ACTIONS_RUNNER_ACTION_ARCHIVE_CACHE = '/opt/actionarchivecache'
+2026-06-28T22:13:37.2703771Z #     XDG_CONFIG_HOME = '/home/runner/.config'
+2026-06-28T22:13:37.2704307Z #     DOTNET_SKIP_FIRST_TIME_EXPERIENCE = '1'
+2026-06-28T22:13:37.2704819Z #     ANT_HOME = '/usr/share/ant'
+2026-06-28T22:13:37.2705347Z #     JAVA_HOME_8_X64 = '/usr/lib/jvm/temurin-8-jdk-amd64'
+2026-06-28T22:13:37.2705955Z #     GITHUB_TRIGGERING_ACTOR = 'sistemas39'
+2026-06-28T22:13:37.2706461Z #     GITHUB_REF_TYPE = 'branch'
+2026-06-28T22:13:37.2706991Z #     HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS = '3650'
+2026-06-28T22:13:37.2707686Z #     ACTIONS_RUNNER_RETURN_JOB_RESULT_FOR_HOSTED = '1'
+2026-06-28T22:13:37.2708306Z #     ANDROID_NDK = '/usr/local/lib/android/sdk/ndk/27.3.13750724'
+2026-06-28T22:13:37.2708901Z #     BOOTSTRAP_HASKELL_NONINTERACTIVE = '1'
+2026-06-28T22:13:37.2709468Z #     PWD = '/home/runner/work/zombie-survival/zombie-survival'
+2026-06-28T22:13:37.2710031Z #     PIPX_BIN_DIR = '/opt/pipx_bin'
+2026-06-28T22:13:37.2710469Z #     LOGNAME = 'runner'
+2026-06-28T22:13:37.2710856Z #     GITHUB_REPOSITORY_ID = '1283381606'
+2026-06-28T22:13:37.2711301Z #     GITHUB_ACTIONS = 'true'
+2026-06-28T22:13:37.2711707Z #     USE_BAZEL_FALLBACK_VERSION = 'silent:'
+2026-06-28T22:13:37.2712317Z #     ANDROID_NDK_LATEST_HOME = '/usr/local/lib/android/sdk/ndk/29.0.14206865'
+2026-06-28T22:13:37.2713184Z #     SYSTEMD_EXEC_PID = '1823'
+2026-06-28T22:13:37.2713671Z #     GITHUB_SHA = '59f1f9f0a7b33eea2de795d089cb6d7fc5c2445d'
+2026-06-28T22:13:37.2714508Z #     GITHUB_WORKFLOW_REF = 'sistemas39/zombie-survival/.github/workflows/build.yml@refs/heads/main'
+2026-06-28T22:13:37.2715409Z #     POWERSHELL_DISTRIBUTION_CHANNEL = 'GitHub-Actions-Linux'
+2026-06-28T22:13:37.2716004Z #     RUNNER_ENVIRONMENT = 'github-hosted'
+2026-06-28T22:13:37.2716465Z #     DOTNET_MULTILEVEL_LOOKUP = '0'
+2026-06-28T22:13:37.2716903Z #     GITHUB_REF = 'refs/heads/main'
+2026-06-28T22:13:37.2717327Z #     RUNNER_OS = 'Linux'
+2026-06-28T22:13:37.2717692Z #     GITHUB_REF_PROTECTED = 'false'
+2026-06-28T22:13:37.2718109Z #     HOME = '/home/runner'
+2026-06-28T22:13:37.2718541Z #     GITHUB_API_URL = 'https://api.github.com'
+2026-06-28T22:13:37.2719044Z #     LANG = 'C.UTF-8'
+2026-06-28T22:13:37.2719468Z #     GOROOT_1_25_X64 = '/opt/hostedtoolcache/go/1.25.11/x64'
+2026-06-28T22:13:37.2720133Z #     RUNNER_TRACKING_ID = 'github_fbdbcd8e-c6f6-4243-ba45-2fbb68424d31'
+2026-06-28T22:13:37.2721001Z #     RUNNER_ARCH = 'X64'
+2026-06-28T22:13:37.2721402Z #     RUNNER_TEMP = '/home/runner/work/_temp'
+2026-06-28T22:13:37.2722266Z #     GITHUB_STATE = '/home/runner/work/_temp/_runner_file_commands/save_state_e55ad1f8-59ab-410a-9f66-eb0bf7aa8ea5'
+2026-06-28T22:13:37.2723386Z #     EDGEWEBDRIVER = '/usr/local/share/edge_driver'
+2026-06-28T22:13:37.2724002Z #     JAVA_HOME_21_X64 = '/usr/lib/jvm/temurin-21-jdk-amd64'
+2026-06-28T22:13:37.2724892Z #     GITHUB_ENV = '/home/runner/work/_temp/_runner_file_commands/set_env_e55ad1f8-59ab-410a-9f66-eb0bf7aa8ea5'
+2026-06-28T22:13:37.2725917Z #     GITHUB_EVENT_PATH = '/home/runner/work/_temp/_github_workflow/event.json'
+2026-06-28T22:13:37.2726622Z #     INVOCATION_ID = '5d4ebc8a17e1410883d401ebe19d8c5d'
+2026-06-28T22:13:37.2727142Z #     GITHUB_EVENT_NAME = 'push'
+2026-06-28T22:13:37.2727551Z #     GITHUB_RUN_ID = '28337709939'
+2026-06-28T22:13:37.2728197Z #     JAVA_HOME_17_X64 = '/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64'
+2026-06-28T22:13:37.2729023Z #     ANDROID_NDK_HOME = '/usr/local/lib/android/sdk/ndk/27.3.13750724'
+2026-06-28T22:13:37.2730082Z #     GITHUB_STEP_SUMMARY = '/home/runner/work/_temp/_runner_file_commands/step_summary_e55ad1f8-59ab-410a-9f66-eb0bf7aa8ea5'
+2026-06-28T22:13:37.2731036Z #     HOMEBREW_NO_AUTO_UPDATE = '1'
+2026-06-28T22:13:37.2735513Z #     GITHUB_ACTOR = 'sistemas39'
+2026-06-28T22:13:37.2735953Z #     NVM_DIR = '/home/runner/.nvm'
+2026-06-28T22:13:37.2736504Z #     SGX_AESM_ADDR = '1'
+2026-06-28T22:13:37.2736870Z #     GITHUB_RUN_ATTEMPT = '1'
+2026-06-28T22:13:37.2737301Z #     ANDROID_HOME = '/usr/local/lib/android/sdk'
+2026-06-28T22:13:37.2737901Z #     GITHUB_GRAPHQL_URL = 'https://api.github.com/graphql'
+2026-06-28T22:13:37.2738576Z #     ACCEPT_EULA = 'Y'
+2026-06-28T22:13:37.2739041Z #     USER = 'runner'
+2026-06-28T22:13:37.2740280Z #     PSModulePath = '/root/.local/share/powershell/Modules:/usr/local/share/powershell/Modules:/opt/microsoft/powershell/7/Modules:/usr/share/az_15.6.1'
+2026-06-28T22:13:37.2741400Z #     GITHUB_SERVER_URL = 'https://github.com'
+2026-06-28T22:13:37.2741863Z #     PIPX_HOME = '/opt/pipx'
+2026-06-28T22:13:37.2742323Z #     GECKOWEBDRIVER = '/usr/local/share/gecko_driver'
+2026-06-28T22:13:37.2743178Z #     CHROMEWEBDRIVER = '/usr/local/share/chromedriver-linux64'
+2026-06-28T22:13:37.2743704Z #     SHLVL = '1'
+2026-06-28T22:13:37.2744081Z #     ANDROID_SDK_ROOT = '/usr/local/lib/android/sdk'
+2026-06-28T22:13:37.2744639Z #     VCPKG_INSTALLATION_ROOT = '/usr/local/share/vcpkg'
+2026-06-28T22:13:37.2745133Z #     GITHUB_ACTOR_ID = '297725311'
+2026-06-28T22:13:37.2745746Z #     ACTIONS_ORCHESTRATION_ID = '971c61cf-e41d-42e5-b283-70aac8f6654b.build.__default'
+2026-06-28T22:13:37.2746451Z #     RUNNER_TOOL_CACHE = '/opt/hostedtoolcache'
+2026-06-28T22:13:37.2746909Z #     ImageVersion = '20260623.199.1'
+2026-06-28T22:13:37.2747302Z #     DOTNET_NOLOGO = '1'
+2026-06-28T22:13:37.2747780Z #     GITHUB_WORKFLOW_SHA = '59f1f9f0a7b33eea2de795d089cb6d7fc5c2445d'
+2026-06-28T22:13:37.2748424Z #     GOROOT_1_24_X64 = '/opt/hostedtoolcache/go/1.24.13/x64'
+2026-06-28T22:13:37.2748931Z #     GITHUB_REF_NAME = 'main'
+2026-06-28T22:13:37.2749357Z #     GITHUB_JOB = 'build'
+2026-06-28T22:13:37.2749739Z #     XDG_RUNTIME_DIR = '/run/user/1001'
+2026-06-28T22:13:37.2750243Z #     AZURE_EXTENSION_DIR = '/opt/az/azcliextensions'
+2026-06-28T22:13:37.2750811Z #     GOROOT_1_26_X64 = '/opt/hostedtoolcache/go/1.26.4/x64'
+2026-06-28T22:13:37.2751373Z #     GITHUB_REPOSITORY = 'sistemas39/zombie-survival'
+2026-06-28T22:13:37.2751982Z #     ANDROID_NDK_ROOT = '/usr/local/lib/android/sdk/ndk/27.3.13750724'
+2026-06-28T22:13:37.2752777Z #     CHROME_BIN = '/usr/bin/google-chrome'
+2026-06-28T22:13:37.2753222Z #     GITHUB_RETENTION_DAYS = '90'
+2026-06-28T22:13:37.2753633Z #     JOURNAL_STREAM = '8:15407'
+2026-06-28T22:13:37.2754114Z #     RUNNER_WORKSPACE = '/home/runner/work/zombie-survival'
+2026-06-28T22:13:37.2754677Z #     LEIN_HOME = '/usr/local/lib/lein'
+2026-06-28T22:13:37.2755601Z #     LEIN_JAR = '/usr/local/lib/lein/self-installs/leiningen-2.12.0-standalone.jar'
+2026-06-28T22:13:37.2756313Z #     GITHUB_ACTION_REPOSITORY = ''
+2026-06-28T22:13:37.2756764Z #     HCA_CLOUD_PROVIDER = 'azure'
+2026-06-28T22:13:37.2759450Z #     PATH = '/home/runner/.buildozer/android/platform/apache-ant-1.9.4/bin:/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/runner/.local/bin'
+2026-06-28T22:13:37.2762246Z #     GITHUB_BASE_REF = ''
+2026-06-28T22:13:37.2762922Z #     GHCUP_INSTALL_BASE_PREFIX = '/usr/local'
+2026-06-28T22:13:37.2763413Z #     CI = 'true'
+2026-06-28T22:13:37.2763790Z #     SWIFT_PATH = '/usr/share/swift/usr/bin'
+2026-06-28T22:13:37.2764241Z #     ImageOS = 'ubuntu22'
+2026-06-28T22:13:37.2764632Z #     GITHUB_REPOSITORY_OWNER = 'sistemas39'
+2026-06-28T22:13:37.2765088Z #     GITHUB_HEAD_REF = ''
+2026-06-28T22:13:37.2765461Z #     GITHUB_ACTION_REF = ''
+2026-06-28T22:13:37.2765889Z #     ENABLE_RUNNER_TRACING = 'true'
+2026-06-28T22:13:37.2766362Z #     GITHUB_WORKFLOW = 'Build Android APK'
+2026-06-28T22:13:37.2766887Z #     DEBIAN_FRONTEND = 'noninteractive'
+2026-06-28T22:13:37.2767933Z #     GITHUB_OUTPUT = '/home/runner/work/_temp/_runner_file_commands/set_output_e55ad1f8-59ab-410a-9f66-eb0bf7aa8ea5'
+2026-06-28T22:13:37.2768725Z #     AGENT_TOOLSDIRECTORY = '/opt/hostedtoolcache'
+2026-06-28T22:13:37.2769179Z #     _ = '/home/runner/.local/bin/buildozer'
+2026-06-28T22:13:37.2769741Z #     PACKAGES_PATH = '/home/runner/.buildozer/android/packages'
+2026-06-28T22:13:37.2770341Z #     ANDROIDSDK = '/usr/local/lib/android/sdk'
+2026-06-28T22:13:37.2771019Z #     ANDROIDNDK = '/home/runner/.buildozer/android/platform/android-ndk-r28c'
+2026-06-28T22:13:37.2771685Z #     ANDROIDAPI = '33'
+2026-06-28T22:13:37.2772053Z #     ANDROIDMINAPI = '24'
+2026-06-28T22:13:37.2772615Z # 
+2026-06-28T22:13:37.2772962Z # Buildozer failed to execute the last command
+2026-06-28T22:13:37.2773507Z # The error might be hidden in the log above this error
+2026-06-28T22:13:37.2774153Z # Please read the full log, and search for it before
+2026-06-28T22:13:37.2774746Z # raising an issue with buildozer itself.
+2026-06-28T22:13:37.2775392Z # In case of a bug report, please add a full log with log_level = 2
+2026-06-28T22:13:37.2906479Z ##[error]Process completed with exit code 1.
