@@ -14,54 +14,12 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v4
 
-      - name: Instalar dependencias del sistema
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            python3-pip \
-            build-essential \
-            git \
-            python3 \
-            python3-dev \
-            libsdl2-dev \
-            libsdl2-image-dev \
-            libsdl2-mixer-dev \
-            libsdl2-ttf-dev \
-            zlib1g-dev \
-            libncurses5-dev \
-            libgdbm-dev \
-            libnss3-dev \
-            libssl-dev \
-            libreadline-dev \
-            libffi-dev \
-            libsqlite3-dev \
-            wget \
-            libbz2-dev \
-            unzip \
-            zip \
-            openjdk-17-jdk \
-            cmake \
-            pkg-config \
-            autoconf \
-            automake \
-            libtool
-
-      - name: Configurar Java
-        uses: actions/setup-java@v4
+      - name: Build with Buildozer
+        uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer
         with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Instalar Buildozer
-        run: |
-          pip3 install --user --upgrade buildozer cython==0.29.37 virtualenv
-
-      - name: Compilar APK
-        run: |
-          export PATH=$PATH:~/.local/bin
-          buildozer android debug || true
-          yes | ~/.buildozer/android/platform/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses || true
-          buildozer android debug
+          command: buildozer android debug
+          buildozer_version: master
 
       - name: Subir APK
         uses: actions/upload-artifact@v4
